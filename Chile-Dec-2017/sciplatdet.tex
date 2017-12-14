@@ -1,0 +1,29 @@
+\frame {
+  \frametitle{ JupyterLab Aspect }
+\begin{columns}
+\column{0.5\textwidth}
+   \includegraphics[width=1.6\textwidth]{images/JupyterLab}\\
+\column{0.5\textwidth}
+\vspace{-6.5cm}
+\\
+To enable next level of next-to-the-data work, we plan to enable the users to launch their own Jupyter notebooks at our computing resources at the DAC. These will have fast access to the LSST database and files. They will come with commonly used and useful tools preinstalled (e.g., AstroPy, LSST data processing software stack).
+\\
+\vspace{10pt}
+This service is  similar in nature to efforts such as SciServer at JHU, or the JupyterHub deployment for DES at NCSA.
+
+\end{columns}
+}
+
+\frame{\frametitle{ APIs and Web Services }
+\begin{itemize}
+\item Web APIs: VO standard protocols where possible; custom extensions where necessary; proposed back to IVOA when applicable
+\begin{itemize}
+\item Catalog \& other tabular data (dbserv) (TAP 1.1, ADQL 2.1, CAOM2)
+\item Image data (imgserv) (SIA V2)
+\item Metadata (metaserv)
+\end{itemize}
+\item Python objects (Data Butler) - abstract access in pipelines
+\item SQL database (Qserv) - MPP Shared noting data base built at Stanford.
+\end{itemize}
+}
+

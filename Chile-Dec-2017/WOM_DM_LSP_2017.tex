@@ -1,0 +1,45 @@
+\documentclass[t,aspectratio=169]{beamer}
+\input{extras}
+
+\usepackage[fonts=false, footline={William O'Mullane \hfill LSST DM  \hfill},
+meeting={LSP Observatory Review 2017},
+position={DM Project Manager}
+]{LSST-beamer}
+
+\author{William O'Mullane  {\tiny input from \u{Z}eljko Ivezi\'c }}
+\date{Paranal  13$^{th}$  December 2017}
+\title{LSST Data Mangement}
+
+\begin{document}
+
+\maketitle
+
+\input{lssthistory}
+\input{lsst}
+\input{wsintro}
+\input{dmchal}
+\input{ops}
+\input{dm}
+\input{sciplat}
+\input{sciplatevol}
+\input{scicolab}
+\input{conclusion}
+
+\appendix
+\section {Reference material}
+\frame[allowframebreaks]{\frametitle{ Acronyms }
+	\vspace{10pt}
+	\tiny
+	\input{acronyms}
+}
+
+\frame{\frametitle{ References }
+	\tiny
+	\bibliographystyle{lsst_aa}
+	\bibliography{local,lsst,gaia_livelink_valid,refs,books,refs_ads}
+	\normalsize
+
+}
+%\section {Backup slides}
+
+\end{document}

@@ -1,0 +1,52 @@
+\documentclass[t,aspectratio=169]{beamer}
+
+
+\usepackage[fonts=false, footline={William O'Mullane \hfill LSST DM  \hfill},
+meeting={Towards Science in Chile with LSST},
+position={DM Project Manager}
+]{LSST-beamer}
+
+\input{extras}
+
+\author{William O'Mullane  {\tiny input from \u{Z}eljko Ivezi\'c }}
+\date{Santiago de Chile  14$^{th}$  December 2017}
+\title{LSST Data Management}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Introduction project status}
+\input{wsintro}
+\input{dmchal}
+\input{dm}
+\input{hardware}
+\input{docs}
+\input{scicolab}
+\input{sciplat}
+\input{cldac}
+\input{sciplatdet}
+\input{jupdemo}
+\input{sciplatevol}
+\input{goals}
+\input{conclusion}
+
+\appendix
+\section {Reference material}
+\frame[allowframebreaks]{\frametitle{ Acronyms }
+	\vspace{10pt}
+	\tiny
+	\input{acronyms}
+}
+
+\frame{\frametitle{ References }
+	\tiny
+	\bibliographystyle{lsst_aa}
+	\bibliography{local,lsst,gaia_livelink_valid,refs,books,refs_ads}
+	\normalsize
+
+}
+%\section {Backup slides}
+
+\end{document}

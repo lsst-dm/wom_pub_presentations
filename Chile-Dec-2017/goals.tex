@@ -1,0 +1,48 @@
+\section{DM planning}
+\frame { \frametitle{ High Level Goals }
+\vspace{-3pt}
+ \begin{itemize}
+   \item{2017: Prototyping data access and first access to hardware}
+      \begin{itemize}
+        \item{Dec: Prototype notebooks, private databases for Science Platform}
+        \item{Dec: Robust coadd available in Stack}
+     \end{itemize}
+
+   \item{2018: Prototypes for various processes and databases - ``Minimum Viable System''}
+
+     \begin{itemize}
+       \item{Jan: Jointcal replace meas\_mosaic}
+       \item{Jun: At-scale test of Alert Distribution}
+       \item{Aug: Mountain base network up}
+       \item{Oct: Spectrograph data acquisition}
+       \item{Dec: Prototype QA/Commissioning Environment}
+     \end{itemize}
+
+   \item{Dec 2019: ComCam L1, L2 Production}
+   \item{Dec 2019: Base Center Integration Complete}
+   \item{Jun 2020: Camera L1, L2 Production}
+   \item{Jul 2021: US Data Access Center Integrated}
+   \item{Jun 2022: Chilean Data Access Center Integrated (\citeds{LDM-572})}
+ \end{itemize}
+ \begin{center}
+\vspace{-8pt}
+ \textit{Test plans to confirm milestone completion are under development.}
+ \end{center}
+}
+
+\frame{\frametitle{Commissioning Start Requirements}
+
+November 2019: DM for Commissioning (minimum required for start of commissioning with ComCam):
+\hfill {\bf (See \citeds{LSE-79} \S 3.3 and table 8)}
+\begin{itemize}
+\item Pipeline: single-frame measurement including ISR, ghost masking, cosmic ray detection, PSF estimation, astrometric and photometric calibration, background estimation, single-frame deblending, master calibration image generation, atmospheric characterization
+\item Services: archiving, EFD transformation, Data Backbone for files (Base/NCSA), telemetry gateway, OCS-controlled batch, offline processing
+\item LSST Science Platform on Commissioning Cluster: Notebook Aspect, image access, user file storage, batch computing
+\end{itemize}
+\textbf{Milestones:}
+\begin{itemize}
+\item LDM-503-9\phantom{0} -- 2018-11-30: on the right track with beta software.
+\item LDM-503-11 -- 2019-10-31: verification of ComCam commissioning requirements.
+
+\end{itemize}
+}

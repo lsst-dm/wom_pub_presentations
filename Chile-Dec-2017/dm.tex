@@ -1,0 +1,128 @@
+\section{Data Management }
+
+\frame {\frametitle{ LSST org chart - where DM fits }
+\begin{columns}
+\column{0.65\textwidth}
+      \includegraphics[width=1.2\textwidth]{images/Org_Chart_LSST}\\
+\column{0.35\textwidth}
+ \\
+\vspace{-5cm}
+LSST project is large and dispersed\\
+Data Management  is just one of five subsystems.
+
+\end{columns}
+}
+
+
+\frame {\frametitle{ Data management }
+\begin{columns}
+\column{0.65\textwidth}
+      \includegraphics[width=1.0\textwidth]{images/DmMap}\\
+\column{0.35\textwidth}
+ \\
+\vspace{-6cm}
+
+ DM Mission :\\
+    {\em  Stand up operable, maintainable, quality services to deliver high-quality LSST data products for science, all on time and within reasonable cost.}\\
+    \vspace{14pt}
+LSST DM development is distributed across the Americas.\\
+
+{\color{blue} Plus we have partners like IN2P3}
+
+\end{columns}
+}
+
+\frame {\frametitle{ DM Organization}
+\vspace{-0.5cm}
+\begin{columns}
+\column{0.7\textwidth}
+\begin{center}
+      \includegraphics[width=1.0\textwidth]{images/DmOrg}\\
+\end{center}
+\column{0.3\textwidth}
+ \\
+\vspace{0.21cm}
+DM leadership meet two times a year and have a weekly telecon. \\
+
+Technical mangers have a {\em standup} every Tuesday and Friday. \\
+{\color{red} Toughest thing in any project is communication.}
+\end{columns}
+}
+
+\frame {\frametitle{  DM build and deploy }
+\vspace{-1cm}
+\begin{columns}
+\column{0.33\textwidth}
+\begin{center}
+      \includegraphics[width=1.0\textwidth]{images/DMSDeployment}\\
+\end{center}
+\column{0.6\textwidth}
+ \\
+\vspace{1cm}
+DM must build everything to get LSST products (see \url{http://ls.st/dpdd})  to the users.
+\begin{itemize}
+\item large data sets (20TB/night)
+\item complex analysis
+\item aiming for small systematics
+\item Science Alerts in under 2 minutes .. (aiming for 1 minute)
+\end{itemize}
+About $1\over{2}$  million lines of code (C++/python)\\
+\vspace{25pt}
+{\tiny diagram K.T. Lim}
+\end{columns}
+}
+
+\frame {\frametitle{  Data Backbone}
+\begin{columns}
+\column{0.45\textwidth}
+      \includegraphics[width=1.0\textwidth]{images/DataBackbone}\\
+\column{0.55\textwidth}
+ \\
+ \vspace{-6cm}
+ One small box on the previous slide was Data Backbone.\\ That hides several things \\
+ \begin{itemize}
+ \item Qserv - the LSST end user database
+\item All the networks : we now have fiber to the mountain and from La Serena to NCSA (two routes)
+ \end{itemize}
+\vspace{25pt}
+{\tiny diagram K.T. Lim}
+\end{columns}
+}
+
+
+\frame {\frametitle{Data flow }
+\begin{columns}
+\column{0.65\textwidth}
+      \includegraphics[width=1.0\textwidth]{images/NearRealTimeDataFlow}\\
+\column{0.35\textwidth}
+\\
+\vspace{-7cm}
+Lots to do every night ..\\
+Plus annually there is a data release \\
+      \includegraphics[width=1.0\textwidth]{images/AnnualReprocessingDataFlow}\\
+
+      {\tiny Images from K.T. Lim}
+\end{columns}
+}
+
+\frame {\frametitle{All comes down to images \ldots }
+\vspace{-5mm}
+\begin{columns}
+\column{0.45\textwidth}
+\vspace{-2mm}
+\begin{center}
+      \includegraphics[width=1.0\textwidth]{images/ImSim-2011-half}\\
+\end{center}
+\column{0.5\textwidth}
+ \\
+\vspace{1cm}
+False color from 3 simulated filter images\\
+{\color{red} From just one of 109 CCDs}\\
+\vspace{3mm}
+To work with that there is the {\em LSST Stack} \url{https://pipelines.lsst.io/}\\
+Current version 14.0 release in November 2017.\\
+Python 3 and C++ 14.
+\end{columns}
+}
+
+

@@ -1,0 +1,78 @@
+\section{Data Access/ Science Platform}
+
+\frame{\frametitle{ The Era Of Surveys }
+\vspace{-0.2cm}
+\begin{columns}
+\column{0.65\textwidth}
+\includegraphics[width=1.0\textwidth,trim=0 0 0 0] {images/AstronomerCartoon}\\
+\column{0.35\textwidth}
+\\
+\vspace{-7.5cm}
+\includegraphics[width=1.0\textwidth,trim=0 0 0 0] {images/HSTpubs}\\
+{\tiny \url{https://archive.stsci.edu/hst/bibliography/pubstat.html}}\\
+
+{\small \ldots indicates  archival  research  probably play an important role in the scientific success of XMM-Newton
+\cite{2014AN....335..210N}}
+
+\end{columns}
+}
+
+
+
+\frame{\frametitle{First serious go at code to data }
+\vspace{5pt}
+\begin{columns}[c]
+\column{0.6\textwidth}
+Early in the millennium - CasJobs (C\#)\citep{conf:casjobs}
+\includegraphics[width=\textwidth]{casjobs}
+\column{0.4\textwidth}
+\includegraphics[width=\textwidth]{skyserverdr3}
+Now evolved \url{http://www.sciserver.org/}
+\end{columns}
+}
+
+
+\frame{\frametitle{ LSST Science Platform}
+\vspace{-10pt}
+\begin{columns}
+\column{0.6\textwidth}
+\includegraphics[width=1.1\textwidth,trim=0 0 0 0] {fig-lsst-science-platform-extended} \\
+\column{0.4\textwidth}
+\vspace{-3.3cm}
+\\
+For DR2:
+\begin{itemize}
+\item Computing:2,400 cores ($\approx 18$ TFLOPs)
+\item File storage: $\approx 4 $PB  (VOSpace)
+\item Database storage: $\approx 3 $PB (MYDB)
+
+\end{itemize}
+\end{columns}
+\vspace{5pt}
+The Science Platform has three user facing aspects: the Portal (novice), the JupyterLab (intermediate), and the Web APIs (expert and remote tools).\\
+\vspace{5pt}
+
+We enable access to the Data Releases and Alert Streams, and support next-to-the data analysis and Level 3 product creation using the computing resources available at the Data Access Center (DAC).  \hfill {\tiny \bf Mario Juric}\\
+{\tiny Concept has been around a year or two  - name suggested in Nov 16}
+}
+
+\frame {
+  \frametitle{ PDAC - Portal, Notebook }
+\begin{columns}
+\column{0.55\textwidth}
+   \includegraphics[width=\textwidth]{images/PDACtable}
+\column{0.45\textwidth}
+\vspace{-5.5cm}
+Prototype Data Access Center
+\begin{itemize}
+        \item Results available in portal and notebook
+        \item Notebook can drive portal
+        \item Forced Photometry
+        \item NeoWise and Stripe82 currently loaded
+        %\item initial science platform test \citeds{DMTR-22}
+\end{itemize}
+\hspace{-3.0cm}
+   \includegraphics[scale=0.6]{images/PDACsky}
+\end{columns}
+}
+
