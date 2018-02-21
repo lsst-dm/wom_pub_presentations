@@ -1,0 +1,44 @@
+% you need to build with xelatex
+\documentclass[t,aspectratio=169]{beamer}
+
+\usepackage[backgroundTheme=LSST2017-nologos,
+  fonts=false, colorlinks=false,
+ footline={DM All Hands $\bullet$ IPAC  $\bullet$ March 6--8, 2018},
+meeting={DM All Hands},
+position={DM Project Manager}
+]{LSST-beamer}
+
+\input{extras}
+
+\author{William O'Mullane}
+\institute{AURA/LSST}
+\title{LSST Data Management Status  }
+\date{ 6$^{th}$ March 2018}
+
+
+\graphicspath{ {./images/}{../../dm-docs/images/} }
+
+
+
+\begin{document}
+
+\maketitle
+\input{overview}
+\input {miles}
+\input{goals}
+\input{risks}
+\section{Status }
+\input{PIPES.tex}
+\input{ARCH.tex}
+\input{DAX.tex}
+\input{NCSA.tex}
+\input{NET.tex}
+\input{SQUARE.tex}
+\input{SUIT.tex}
+\section{Conclusion}
+\input{conc}
+
+\appendix
+\input{refs}
+
+\end{document}

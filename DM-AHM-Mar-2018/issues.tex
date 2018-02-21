@@ -1,0 +1,114 @@
+
+\frame {\frametitle{Hopefully {\color{red}not} DM commissioning }
+	\vspace{-9pt}
+\begin{center}
+\includegraphics[width=0.9\textwidth]{images/Raft_of_the_Medusa_-_Theodore_Gericault} \\
+	\vspace{-3pt}
+{\tiny \bf Raft of the Medusa, Theodore Gericault}
+\end{center}
+}
+
+\frame{\frametitle{Roles, DM products and owners }
+\begin{itemize}
+\item Roles of individuals and groups unclear
+\item The products of DM are not clearly listed - these are not the Data Products  \citeds{LSE-163}
+\item Product Owner is not clear in all cases and retrospectives are not held.
+\item Issues :
+\begin{itemize}
+ \item priorities are not clear nor who sets them nor who decides
+ \item lock up or misdirected effort
+\end{itemize}
+\item Ideas : (now implemented in \citeds{LDM-294}
+\begin{itemize}
+\item Clarify roles in DM
+\item Identify products in a product tree  (see back wall of plenary room)
+\item Identify product owners - which may not always be a scientist nor in the same unit - e.g widgets are produced in SUIT but the sometimes used for building Quality Tools, the product owner of some of those widgets are probably not in SUIT.
+\end{itemize}
+\end{itemize}
+}
+
+\frame{\frametitle{ Test, Integration,  V\& V }
+\begin{itemize}
+\item Not a clear plan for Integration, Verification and Validation
+\item No current plan for Operations Rehearsals to validate the operational system
+\item Issues :
+\begin{itemize}
+	\item there is a WP in SQuaRE but discussions on what validation is seem to have {\em locked} this up
+	\item risk not supporting commissioning effectively by having unstable systems
+\end{itemize}
+\item Ideas :
+\begin{itemize}
+	\item \citeyearpar{LDM-503} defines the full Verification \& Validation plan and define responsibilities for all the parts
+\end{itemize}
+\end{itemize}
+}
+
+\frame{\frametitle{ DM Architecture  }
+	\begin{columns}[c]
+\column{0.7\textwidth}
+\includegraphics[width=\textwidth]{images/DMS_Architecture}
+\column{0.3\textwidth}
+Pinning down scope is difficult in science algorithms - this is more investigation. Infrastructure scope less so.\\
+\vspace{1cm}
+{\tiny \bf Diagram K.T. Lim}
+\end{columns}
+}
+
+\frame{\frametitle{ Scope not always clear  }
+\begin{itemize}
+	\item As normal especially for science projects requirements have degree of {\em interpretation}
+	\item Similarly project guidelines may be interpreted
+\item Issues :
+\begin{itemize}
+	\item some extra scope taken on and not properly agreed how to pay for it
+	\item too much risk {\em factored in} to some WBS
+	\item scope of some modules completely unclear (lack of product owner(s))
+\end{itemize}
+\item Ideas :
+\begin{itemize}
+	\item  calculate contingency on risk - LSST approach
+	\item prioritize requirements so we know where to deploy effort
+	\item Use short lived working groups to pin down specific topics (SuperTask WG).
+	\item Visit sites and really understand what they are doing
+\end{itemize}
+\end{itemize}
+}
+
+\frame{\frametitle{Configuration Control}
+\begin{itemize}
+\item Everyone seems to build all the software packages
+\item Some effort put into conda releases but was not working out - EUPS works
+\item Issues :
+\begin{itemize}
+	\item lack of  stability in the code base - build all the only way to make changes
+	\item despite having a CCB (called TCT)  changes can be disruptive
+	\item no one {\em owns } code modules
+\end{itemize}
+\item Ideas :
+\begin{itemize}
+	\item Introduce the traditional configuration manager role
+	\item get dependencies under control
+	\item have stable releases toward end of cycle - provide bug fixes on demand for  at least the last  release
+	\item (re)introduce module custodians
+	\item {\color{red} No other way to support an operational system.}
+\end{itemize}
+\end{itemize}
+}
+
+
+
+\frame{\frametitle{ Other Risks/Opportunities }
+
+\begin{itemize}
+\item Transparency of leadership (or the lack thereof)
+\item Scope of Chilean DAC  -  now in draft form
+\item Prioritization and scope in general needs to be looked at (addressed in Replan and new version of \citeds{LSE-61}
+\item Galaxy multifit for dark energy - could/should be done later.
+\item Parallelisation of code in C++ is hard - but needed for LSST
+\item Keeping all old releases on disk  to be costed ( has been costed, not really accepted for ops)
+\item Keeping all data on disk instead of tape to be costed (in progress)
+\item Number of users for science platform and portal (5 * SDSS)
+\item Qserv - need to confirm its a good choice - went to SLAC soon to understand this. Study with Microsoft pending
+\end{itemize}
+}
+
