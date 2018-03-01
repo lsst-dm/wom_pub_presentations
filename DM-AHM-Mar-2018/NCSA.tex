@@ -1,8 +1,90 @@
-\frame{\frametitle{LSST Data Facility (NCSA)}
+\frame[allowframebreaks]{\frametitle{LSST Data Facility (NCSA)}
 
 \begin{itemize}
-\item
+\item  Observatory Operations Support (Level 1) Services
+
+\begin{itemize}
+\item Working closely within the LSST Systems Engineering Early Pathfinder group, developing and incrementally testing integration of T\&S, Camera, and DM service software via a series of early integration activities.
+    \item Initial header service developed and configured for Camera subsystem and AuxTel use cases, ability to acquire pixel data and write FITS files, all commandable by OCS. Demonstrated on Level 1 Complete Test Stand.
+
+\end{itemize}
+\item Offline Campaign Processing and Batch Production Services
+
+\begin{itemize}
+    \item Production processing of HSC data for 503-2 milestone, working with DRP group.
+    \item Upgrades to existing production framework based on DES data management system, including migration to Python 3.
+    \item Continued regular dataset reprocessing to provide datasets for developers based on biweekly stack updates.
+
+\end{itemize}
+\item Data Backbone Services
+
+\begin{itemize}
+    \item Single-node consolidated database operational, supporting integration and testing of the batch production service.
+    \item Provided operations use cases and developed requirements for Gen3 middleware working groups.
+
+\end{itemize}
+\item Container Application Management Services
+
+\begin{itemize}
+    \item Investigated deployment documentation and service level configurations requirements for FY18 Kubernetes deployment.
+    \item Worked with SLAC, SQuaRE, and IPAC for requirement investigation and deployment configurations for initial use case support.
+
+\end{itemize}
+\item Developer Support Services
+
+\begin{itemize}
+    \item Upgrades to PDAC, including new dedicated Qserv head node provisioned in PDAC and interim Kubernetes installed on single PDAC node for special testing
+    \item LSST-DB (MySQL developer database) replacement provisioned.
+    \item Expand Level 1 Complete Test Stand to support early pathfinder testing and other cross-subsystem use cases.
+
+\end{itemize}
+\item ITC and Facility
+
+\begin{itemize}
+    \item 11 of 18 FY17 and FY18 capabilities provisioned including: initial production Kubernetes cluster, infrastructure for Chilean Base network security and identity management endpoint (shipped, installed, tested, and shipped), 3PB GPFS expansion for initial production file systems, consolidated database (Oracle cluster), Level 1 Complete Test Stand expansion, system for Tucson ATS Test Stand, data transfer nodes, disaster recovery capability for site file systems, central core network upgrade supporting large capability expansion.
+    \item Matured system configuration management and operations with xCAT and Puppet.
+
+\end{itemize}
+\item Service Monitoring and Management
+
+\begin{itemize}
+    \item LDF service monitoring framework designed, implemented, and deployed; beginning integration of systems and base services.
+
+\end{itemize}
+\item Other technical work within the project
+
+\begin{itemize}
+    \item Lossy Compression Working Group
+    \item Data Access Working Group -- policies at the project-level
+    \item End-to-end long-haul network test
+\end{itemize}
 \end{itemize}
 }
 
+
+\frame{\frametitle{NCSA - 2018 plans }
+\begin{itemize}
+\item  AuxTel Operations (Fall) (LSST- and DM-level milestones)
+
+\begin{itemize}
+    \item AuxTel Test Stand operations (April).
+    \item Provisioning of Chilean ITC (Summit facility) for AuxTel operations.
+    \item Spectrograph Archiving Service building raw images, Header Service.
+    \item Data transfer to NCSA, ingestion and archiving into initial version of production Data Backbone (single site).
+    \item CPP production processing.
+    \item EFD ETL Service operational, including database and Large File Annex.
+
+\end{itemize}
+\item Chilean Base AA and security monitoring systems installed, services deployed, and monitored (April 2018) in NOAO facility.
+\item Application-level integration with service monitoring framework and initial set of dashboards for service operations and capacity management use cases.
+\item Supporting ongoing development
+
+\begin{itemize}
+    \item Initial Kubernetes Service in VERY friendly user mode March 2018. Integration of use cases for developers (e.g., hosting Jupyter notebooks, Alert Distribution system testing, etc.) throughout CY18.
+    \item Full HSC PDR reprocessing campaign and continued dataset processing.
+    \item Continue providing production-oriented input into Gen3 Middleware development, including design, testing, and planning use in production framework.
+    \item Improvements to Developers Support Services.
+\end{itemize}
+\end{itemize}
+}
 
