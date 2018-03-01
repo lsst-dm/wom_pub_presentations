@@ -1,10 +1,36 @@
-\frame{\frametitle{SQuaRE }
-
-
-
-
-\begin{itemize}
-\item
-\end{itemize}
+\frame{\frametitle{SQuaRE}
+\begin{columns}
+    \begin{column}{0.6\textwidth}
+        \begin{itemize}
+            \item Current status and recent highlights:
+            \begin{itemize}
+                \item Notebook Aspect meets most requirements. Deployments:
+                \begin{itemize}
+                    \item Two SQuaRE development deploys on GKE (1 stage, 1 semi-prod)
+                    \item Other deploys: SysEng, EPO, tutorials
+                    \item DM deploy coming soon on LDF k8 commons prototype
+                \end{itemize}
+                \item CI developer wishlist done including much improved Slack notifications
+                \item SQuaSH 
+                    \begin{itemize}
+                        \item Developer metric support in pre-release testing
+                        \item Replaced Django with flask to match other teams technical stack
+                        \item Moved architecture to Kubernetes for consistent deployment in LDF
+                    \end{itemize}
+                \item Documentation:
+                    \begin{itemize}
+                        \item lsst.io landing page / doc index
+                        \item Pipelines getting-started tutorial
+                        \item package documentation example using `pipe_base`
+                        \item LaTex support for LSST-The-Docs
+                    \end{itemize}
+            \end{itemize}
+        \end{itemize}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+        \begin{center}
+%            \includegraphics[width=\columnwidth]{qserv-in2p3.png}
+        \end{center}
+    \end{column}
+\end{columns}
 }
-
