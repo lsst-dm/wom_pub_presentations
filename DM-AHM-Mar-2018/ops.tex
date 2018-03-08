@@ -8,12 +8,12 @@
 \begin{itemize}
 \item Distributed over SLAC, Tucson, La Serena, NCSA Illinois
 
-\item LSST  Sata Facility element
+\item LSST  Data Facility element
 \item To fit in the new National Center for Optical and infrared Astronomy (NCOA) framework
 \end{itemize}
 \end{itemize}
 
-{\large \color{red} Wht I will present  are elements of the proposal - it is not accepted yet.}
+{\large \color{red} What I will present  are elements of the proposal - it is not accepted yet.}
 
 
 }
@@ -192,8 +192,99 @@ Initially support also in institutes e.g. Princeton   \\
 }
 
 
-\frame{\frametitle{ LSST Data Facility}
+\frame{\frametitle{LSST Data Facility Organisation }
+Organized to provide cohesive, reliable, and efficient production services.
+\begin{columns}
+\column{0.4\textwidth}
+\begin{itemize}
+\item Scientific Production Services and Data, Compute and IT Security Services provide the application-level elements of LDF services.
+\item Production Service Software maintains and evolves the LDF software.
+\item ITC and Facility Operations provide foundational hardware support, building on general facility staff.
 
+\end{itemize}
+
+
+\column{0.6\textwidth}
+\vspace{-1cm}
+\begin{center}
+  \includegraphics[width=0.9\textwidth]{LDForg}\\
+\end{center}
+
+\end{columns}
+}
+
+
+\frame{\frametitle{LDF responsibilities }
+\begin{itemize}
+\item Ingest data from all Observatory cameras and the EFD.
+\item Process data promptly for alert generation and in batch for daily to yearly calibrations and data releases.
+\item Provide alerts for transient sources to event brokers for distribution.
+\item Oversee and manage the hardware and data archive, including data integrity and disaster recovery, at both NCSA and the Chilean DAC.
+\item Monitor and coordinate the wide-area network infrastructure.
+\item Provide infrastructure support for data access services to the user community.
+\item Provide central Authentication and Authorization (AA) security-related services, including access control for science data rights holders and network security controls for the operational facilities.
+
+\end{itemize}
+}
+
+\frame{\frametitle{Scientific Production Services Group (6.75 FTE)}
+
+Ensures the reliable and timely generation of prompt, nightly, and annual data products.
+
+
+\begin{itemize}
+\item Provides first-order tactical scientific data quality assurance (SDQA), focused on an initial diagnosis of issues during processing.
+\item Communicates operational feedback to Science Operations on status of data products production.
+\item Receives pipeline codes from Science Operations and verifies that processing is operationally feasible at production scale.
+\end{itemize}
+Staffed by Lead Production Scientist (1.0 FTE), Production Scientists (3.0 FTE), and Computational Facility Scientists (2.75 FTE).
+}
+
+
+
+\frame{\frametitle{Data, Compute, and IT Security Services Group (8.5 FTE) }
+Provides operational support for foundational services.
+\begin{itemize}
+\item File management services on the LSST data backbone including ingestion, distribution, migration, replication, deletion, backup, disaster recovery.
+\item Managed database administration.
+\item Batch computing and containerized application management.
+\item Authentication and Authorization (AA) and network security monitoring across LSST.
+\end{itemize}
+Staffed by Foundational Services Manager (0.75 FTE), File Services Administrators (1.75 FTE), Database Administrators (3.75 FTE), Workflow Services Administrators (0.75 FTE), Operational Security Engineers (1.5 FTE).
+
+}
+
+\frame{\frametitle{Production Service Software Group (4.3 FTE) }
+Maintains, enhances, and evolves supporting software infrastructure required for production, including
+\begin{itemize}
+\item Qserv, the large-scale custom scientific database.
+\item Image acquisition and archiving.
+\item Near real-time execution orchestration, batch processing, data staging.
+\item LSST data backbone management.
+\item Data access, bulk export, hosting the LSST Science Platform.
+\item General LDF operational and service management software.
+
+\end{itemize}
+
+Staffed by Lead Software Engineer (1.0 FTE), Service Software Engineers (3.25 FTE), and Business Process Programmer (0.05 FTE).
+
+}
+
+
+\frame{\frametitle{ITC and Facility Operations Group (12.25 FTE) }
+Provides system administration and physical system operations of the LSST Data Facility computing, storage, and communications infrastructure.
+
+\begin{itemize}
+\item Operation of systems at NCSA and Base Site, including 24x7 support.
+\item Deployment and decommissioning of ITC infrastructure, physical space planning, coordination with Base and satellite facilities.
+\item Operation, management and support of Chilean and U.S. national and international networks for LSST usage.
+
+\end{itemize}
+Staffed by IT Center Systems Manager (1.0 FTE), IT System Administrators (3.25 FTE), IT System Technician (1.0 FTE), Computing Facility Operator (0.5 FTE), Facility Network Engineers (1.75 FTE), Storage Engineers (4 FTE), WAN Technical Manager (0.5 FTE), and WAN Architect (0.25 FTE).
+
+}
+
+\frame{\frametitle{ LSST Data Facility}
 \vspace{10pt}
 \begin{columns}
 \begin{column}{0.4\textwidth}
@@ -204,14 +295,11 @@ NCSA scientific and technical staff drawn from existing core areas of Center exp
 FNAL due to proximity and existing collaborative relationships (e.g., DES). \\
 \vspace{15pt}
 SLAC due to intimate knowledge of software created during the LSST construction project. Currently includes QSERV\\
-
-
 \end{column}
 \begin{column}{0.6\textwidth}
 \includegraphics[width=\textwidth]{LDFFTE}\\
 \end{column}
 \end{columns}
-
 }
 
 \frame{\frametitle{LSST Operations - Proposed Staffing profile}
@@ -242,7 +330,7 @@ SLAC due to intimate knowledge of software created during the LSST construction 
 
 \frame{\frametitle{DM Transition }
 \begin{itemize}
-\item DM --> Science Operations and LDF
+\item DM --> Science Operations and LSST Data Facility
 \item Starting to look at specific roles and the transition of DM staff into them
 \item  As you see in the previous chart there will be a problem in commissioning to find enough FTEs
 \item We may have to extend DM constructing further
