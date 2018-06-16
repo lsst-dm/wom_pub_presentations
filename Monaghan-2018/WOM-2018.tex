@@ -1,0 +1,58 @@
+
+\PassOptionsToPackage{table}{xcolor}
+
+\documentclass[t,aspectratio=169]{beamer}
+\usepackage[backgroundTheme=LSST2017-nologos,
+  footline={William O'Mullane $\bullet$ Scoil Mhuire Clontibert $\bullet$ 18$^{th}$ June 2018},
+  fonts=false, colorlinks=false,
+position={DM Project Manager}
+]{LSST-beamer}
+
+
+\input{extras}
+
+\title[Measuring the Galaxy ]{Measuring our galaxy and beyond}
+\date{18$^{th}$ July 2018 Scoil Mhuire, Clontibret, Monaghan, Ireland}
+
+
+
+
+% ----------------------
+
+
+\AtBeginSection[]  % "Beamer, do the following at the start of every section"
+{
+\hspace*{10pt}
+\begin{frame}<beamer>
+\frametitle{Outline of the talk } % make a frame titled "Outline"
+\tableofcontents[currentsection]  % show TOC and highlight current section
+\end{frame}
+}
+
+
+\begin{document}
+
+\maketitle
+\input{wom-history}
+\section{European Space Agency }
+\input{wom_esa.tex}
+\input{sci_ox.tex}
+\section {Gaia and LSST }
+\input{intro}
+\input{lsst}
+\input{launch}
+\input{astro}
+\input{questions}
+\frame[allowframebreaks]{\frametitle{ Acronyms }
+\vspace{10pt}
+\tiny
+\input{acronyms}
+}
+\frame{\frametitle{ References }
+\tiny
+\bibliographystyle{gaia_aa}
+\bibliography{lsst,gaia_livelink_valid,books,refs_ads}
+\normalsize
+
+}
+\end{document}
