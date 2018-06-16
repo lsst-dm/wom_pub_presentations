@@ -1,4 +1,3 @@
-\input{gaiahistory}
 \frame{
 \frametitle{Satellite overview }
 \setbeamercovered{invisible}
@@ -36,50 +35,3 @@
 }
 
 
-%
-
-{ % all template changes are local to this group.
-\setbeamertemplate{navigation symbols}{}
-
-\frame[plain] {
-  \begin{tikzpicture}[remember picture,overlay]
-           \node[at=(current page.center)] {
-	   \includegraphics[width=1.00\paperwidth]{gaiaim/SP9_image_5_a};
-           };
-            \node<2>[at=(current page.center)] {
-	   \includegraphics[width=1.00\paperwidth]{gaiaim/SP9_image_5_b};
-           };
-   \end{tikzpicture}
-}
-
-} % end local changes
-
-
-\frame {\frametitle{Data processing - challenging }
-\vspace{14pt}
-\begin{itemize}
-\item Astrometric centroid of the CCD image to be determined to an accuracy of  1\% of
-the pixel size!
-\begin{itemize}
-\item There will be $10^{12}$ images $\approx 100$TB downlink need to handle $\approx 1$PB
-\item At 1 millisecond each that is $\approx 30 $~years
-\item Processing estimate remains $\approx 10^{20} $ FLOP
-\end{itemize}
-\item Reconstructed  attitude is required to order 10 $\mu$arcsec
-\begin{itemize}
-\item Path of light through instrument needed to $~$nanometre level
-\item System must be extremely stable
-\item Must consider relativistic light bending from solar system objects.
-\end{itemize}
-\pause
-\item {\color{red} Attitude and Geometric calibration can only by done using Gaia's own
-	observational data. (AGIS)} \citep{2011ExA....31..215O,2012A&A...538A..78L}
-
-
-\end{itemize}
-}
-
-
-\input{simpdp}
-
-\input{launch}
