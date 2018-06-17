@@ -31,6 +31,7 @@ ETC:Estimate To Complete
 EVMS:Earned Value Management System
 FDR:Final Design Review
 FM:Flat Mirror 
+GB:GigaByte
 GWT:Google Web Toolkit
 HSC:Hyper Suprime-Cam
 http:HyperText Transfer Protocol
