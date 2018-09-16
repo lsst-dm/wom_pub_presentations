@@ -1,21 +1,24 @@
 
 \frame{\frametitle{Fast start with pipelines }
 
-\begin{columns}
-\begin{column}{0.5\textwidth}
-\includegraphics[width=\textwidth]{images/DockerHubStack}
-\end{column}
-\begin{column}{0.5\textwidth}
-
 Find  release you want at \url{https://hub.docker.com/r/lsstsqre/centos/tags/}
 {\tt
-
 >docker run -ti lsstsqre/centos:7-stack-lsst\_distrib-v16\_0
-
-Unable to find image 'lsstsqre/centos:7-stack-lsst\_distrib-v16\_0' locally
-
+}\\
+You may see ..
+{\tt \small Unable to find image 'lsstsqre/centos:7-stack-lsst\_distrib-v16\_0' locally }\\
+\begin{columns}
+\begin{column}{0.55\textwidth}
+\\
+\vspace{20pt}
+Setup up the environment ..\\
+{\tt \small
 >source /opt/lsst/software/stack/loadLSST.bash
-}
+}\\
+\end{column}
+\begin{column}{0.45\textwidth}
+\vspace{+0.1cm}
+\includegraphics[width=\textwidth]{images/DockerHubStack}\\
 \end{column}
 \end{columns}
 

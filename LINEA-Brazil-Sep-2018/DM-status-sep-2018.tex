@@ -2,22 +2,31 @@
 \documentclass[t,aspectratio=169]{beamer}
 
 \input{extras}
+\usepackage[backgroundTheme=LSST2017,
+  fonts=false, colorlinks=false,
+  footline="William O'Mullane $\bullet$ Rio $\bullet$ Sept 2018",
+position={DM Project Manager}
+]{LSST-beamer}
+
 
 \title{LSST Data Management Overview  }
 \date{25$^{th}$ September 2018}
 
 
-\graphicspath{ {../../dm-docs/images}  {./images/}  }
+\graphicspath{ {../../dm-docs/images}    }
 
 
 
 \begin{document}
 
 \maketitle
+\section{Introduction}
 \input{intro}
+\section{LSST status}
 \input{lsst}
 \input{overview}
 \input{status}
+\section{Conclusion}
 \input{conc}
 
 \appendix
