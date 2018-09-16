@@ -1,0 +1,170 @@
+\frame { \frametitle{ LSST:uniform sky survey }
+\begin{columns}
+\column{0.5\textwidth}
+\vspace {-5cm}
+ \\
+An optical/near-IR survey of half the sky in ugrizy bands to r~27.5 (36 nJy) based on 825 visits over  a 10-year period: {\em deep wide fast}.
+%It’s about 5,000 sq. deg. per night, *twice*, on
+%average. That is, about 1,000 visits per night on average. You return to
+%the same position on the sky in about 3-4 nights (in any band). Btw, it’s
+%a nice coincidence worth remembering that the total exposure time per
+%position over 10 years (in all bands) is equal to about one observing night.
+\begin{itemize}
+\item 90\% of time  spent on  uniform survey: every 3-4 nights, the whole observable sky scanned twice per night
+\item	~100 PB of data: about a billion 16 Mpix images, enabling measurements\\ {\color{cyan} for 40 billion objects! }
+\end{itemize}
+{\tiny see also \url{http://www.lsst.org} and \cite{2008arXiv0805.2366I}-arXiv:0805.2366}
+
+\column{0.5\textwidth}
+	 \includegraphics[width=1.1\textwidth]{coverage.jpg}\\
+{\bf 10-year simulation of LSST survey: number of visits in u,g,r band (Aitoff projection of eq. coordinates) }\\
+\end{columns}
+
+}
+\frame { \frametitle{ LSST Camera }
+\begin{columns}
+\column{0.65\textwidth}
+ \includegraphics[width=1.0\textwidth]{images/camera}
+\column{0.35\textwidth}
+ \\
+\vspace {-5cm}
+{\large \bf The largest astronomical camera:}
+\begin {itemize}
+\item 2800 kg
+\item 3.2 Gpix
+\end {itemize}
+\end{columns}
+}
+
+
+\frame { \frametitle{ Science rafts }
+\begin{columns}
+\column{0.65\textwidth}
+\vspace {-7cm}
+\\
+ \includegraphics[width=0.5\textwidth]{images/fov}
+ \includegraphics[width=0.5\textwidth]{images/raftCCD}\\
+
+Modular design: 3200 Megapix = 189 x16 Megapix CCD\\
+9 CCDs share electronics: raft  (=camera 144 Megapix)\\
+\hfill {\bf First of 21 rafts available $\longrightarrow$} \\
+\column{0.25\textwidth}
+	 \includegraphics[width=1.0\textwidth]{images/raftTower}
+\end{columns}
+}
+
+
+
+\frame { \frametitle{ Hardware arriving }
+\begin{columns}
+\column{0.6\textwidth}
+\vspace{-3cm}
+\begin{itemize}
+\item Fused silica optics
+	\begin{itemize}
+	\item contract -  Ball Aerospace (With AOS and Vanguard) , TSESO, REOSC and Materion
+	\item L1 ready to polish - L2 being polished $\Longrightarrow$
+	\item L3 coming this year
+	\end{itemize}
+\item Cryostat to keep cold CCDs at -100C
+	\begin{itemize}
+	\item Grid machining and cell mockup $\Longrightarrow$
+	\item Awarded Housing \& support cylinder fabrication.
+	\end{itemize}
+\end{itemize}
+\column{0.3\textwidth}
+	 \includegraphics[width=1.0\textwidth]{images/l2Optic}\\
+	 \includegraphics[width=1.0\textwidth]{images/grid}\\
+\end{columns}
+
+}
+
+\frame { \frametitle{ Site shaping up (July)}
+	\vspace{-2pt}
+	\includegraphics[width=1.0\textwidth,trim=0cm 4cm 0 2cm,clip]{images/cerroJul2018}
+
+\begin{itemize}
+\item
+\end{itemize}
+}
+
+\frame {\frametitle{ Marine tracking and logisticsi (Sept 1)}
+\begin{columns}
+\column{0.65\textwidth}
+      \includegraphics[width=1.0\textwidth]{images/MarineTracking}\\
+\column{0.35\textwidth}
+ \\
+\vspace{-6cm}
+
+\begin{itemize}
+\item Mv Valparaiso Express – 5 containers held up in Peru, transshipment required to MN Callao Express
+MN Callao Express – 10 Containers
+\item BBC Arizona – Late to Antwerp for Coating vessel and 7 crates
+\item K\&N warehouse Ready in Chile for 15 Containers
+\item Los Angeles Warehouse ready for M2
+\item 9 Pallets of M1M3 lift fixture hardware is MIA! Believed to be in Phoenix warehouse – Chapter 7 Trustee Custody
+\item 6 EIE Containers in Italy scheduled for Packing in Sept.
+\end{itemize}
+
+\end{columns}
+}
+
+\frame {\frametitle{  DM build and deploy }
+	\vspace{-1cm}
+	\begin{columns}
+		\column{0.33\textwidth}
+		\begin{center}
+			      \includegraphics[width=1.0\textwidth]{images/DMSDeployment}\\
+		      \end{center}
+		      \column{0.6\textwidth}
+		       \\
+		       \vspace{1cm}
+		       DM must build everything to get LSST products (see \url{http://ls.st/dpdd})  to the users.
+		       \begin{itemize}
+			       \item large data sets (20TB/night)
+			       \item complex analysis
+			       \item aiming for small systematics
+			       \item Science Alerts in under 2 minutes .. (aiming for 1 minute)
+		       \end{itemize}
+		       About $1\over{2}$  million lines of code (C++/python) all open source on github\\
+		       \vspace{25pt}
+		       {\tiny \bf diagram K.T. Lim}
+	       \end{columns}
+       }
+
+
+
+\frame {\frametitle{It all sits on machines  }
+\begin{columns}
+\column{0.4\textwidth}
+\begin{center}
+      \includegraphics[width=1.0\textwidth]{images/pdac}\\
+      Prototype Data Access Center Machines at NCSA
+\end{center}
+\column{0.6\textwidth}
+\\
+\vspace{-2mm}
+\begin{itemize}
+   \item  NCSA
+\begin{itemize}
+	\item  GPFS  2 PB  (Lots more coming soon!)
+    \item Common batch Computing - 2304 cores ($48\times 48$)
+    \item use of common NCSA VSphere infrastructure
+    \item NCSA tape commons (currently in Blue Waters)
+	\item Fast (100Gbs) links to ESNET,I2,MREN.
+\end{itemize}
+\item Supporting :
+\begin{itemize}
+	\item   Developer spaces and experimentation (Kubernetes), PDAC, etc.
+    \item  LSST Level one test stand (OCS simulator, WAN Emulator, EFD prototype).
+\end{itemize}
+\item Currently  Amazon for builds .
+\item IN2P3 - full QSERV
+\end{itemize}
+
+\end{columns}
+}
+
+
+
+

@@ -1,0 +1,60 @@
+\frame { \frametitle{ High Level Goals }
+ \begin{itemize}
+   \item{2018: Prototypes for various processes and databases - ``Minimum Viable System''}
+     \begin{itemize}
+       \item{Aug: Mountain base network up}
+       \item{Oct: ``Generation 3'' pipeline execution middleware}
+       \item{Nov: Ready for spectrograph data acquisition}
+       \item{Dec: Prototype QA/Commissioning Environment}
+     \end{itemize}
+   \item{Dec 2019: ComCam L1, L2 Production}
+   \item{Dec 2019: Base Center Integration Complete}
+   \item{Jun 2020: Camera L1, L2 Production}
+   \item{Jul 2021: US Data Access Center Integrated}
+ \end{itemize}
+\vspace{-0.34cm}
+ \begin{center}
+ \textit{\citeds{LDM-564} describes functionality provided by each milestone.\\Test specs to confirm milestone completion under development.}
+ \end{center}
+\vspace{-0.40cm}
+\begin{center}
+\small{
+\citeds{LDM-532, LDM-533, LDM-534, LDM-535, LDM-536}\\\citeds{LDM-537, LDM-538, LDM-539, LDM-540, LDM-541}
+}
+ \end{center}
+}
+
+\frame{\frametitle{Commissioning Start Requirements }
+
+November 2019: DM for Commissioning (minimum required for start of commissioning with ComCam):
+\hfill {\bf (See \citeds{LSE-79} \S 3.3 and table 8)}
+\begin{itemize}
+\item Pipeline: single-frame measurement including ISR, ghost masking, cosmic ray detection, PSF estimation, astrometric and photometric calibration, background estimation, single-frame deblending, master calibration image generation, atmospheric characterization
+\item Services: archiving, EFD transformation, Data Backbone for files (Base/NCSA), telemetry gateway, OCS-controlled batch, offline processing
+\item LSST Science Platform on Commissioning Cluster: Notebook Aspect, image access, user file storage, batch computing
+\end{itemize}
+\textbf{Milestones:}
+\begin{itemize}
+\item LDM-503-09\phantom{a} -- 2018-11-30: Demonstrate and rehearse commissioning capabilities
+\item LDM-503-11a -- 2019-10-21: Verify that we are ready for commissioning ComCam
+
+\end{itemize}
+}
+
+
+\frame{\frametitle{ Auxiliary Telescope (AuxTel)  }
+
+{\color{red} Early  commissioning is coming soon!!!}
+\begin{itemize}
+\item Auxiliary Telescope is in Chile already --- the spectrograph will arrive after summer.
+\item We plan to be taking and processing data early 2019!
+\begin{itemize}
+\item  Official operations late 2019 --- milestone LDM-503-08 in preparation for that.
+\end{itemize}
+
+\item We will have a pipeline for processing AuxTel data on the commissioning cluster.
+\item Initially \emph{selected} data will be transferred to NCSA and made available in the Science Platform.
+\item By summer 2019 we will have an automated processing system for AuxTel data.
+\end{itemize}
+}
+

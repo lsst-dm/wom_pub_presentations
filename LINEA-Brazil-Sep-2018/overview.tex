@@ -1,0 +1,218 @@
+\section{Data Management Overview }
+
+\frame {\frametitle{LSST Org Chart: Where DM Fits }
+\begin{columns}
+\column{0.76\textwidth}
+      \includegraphics[width=1.0\textwidth]{images/Org_Chart_LSST_color}\\
+\column{0.24\textwidth}
+ \\
+\vspace{-5cm}
+LSST Project is  large and dispersed.\\
+
+\end{columns}
+\hspace{1.1cm}$\Uparrow$ Data Management is just one of five subsystems.
+}
+
+\frame {\frametitle{Mission Statement }
+\begin{columns}
+\column{0.65\textwidth}
+      \includegraphics[width=1.0\textwidth]{images/DmMap}\\
+\column{0.35\textwidth}
+ \\
+\vspace{-6.5cm}
+
+DM's mission:\\
+    \textit{Stand up operable, maintainable, quality services to deliver high-quality LSST data products for science, all on time and within reasonable cost.}\\
+    \vspace{12pt}
+Development is distributed across the Americas.\\
+
+{\color{blue} Plus we have partners like IN2P3.}\\
+\vspace{8pt}
+See Management Plan \citeds{LDM-294}.
+
+\end{columns}
+}
+\frame {\frametitle{ Data Management Team }
+\begin{center}
+      \includegraphics[width=0.8\textwidth]{images/dm2018}\\
+DM with System Engineering Joint All Hands Meeting IPAC 2018
+\end{center}
+}
+
+
+
+\frame {\frametitle{Organization }
+\vspace{-0.6cm}
+\begin{columns}
+\column{0.7\textwidth}
+\begin{center}
+      \includegraphics[width=1.0\textwidth]{images/DmOrg}\\
+\end{center}
+\column{0.3\textwidth}
+
+\small{
+\vspace{0.1cm}
+{\color{blue}Leanne Guy} replaces Mario Juri\'c (who stays with the project) as Subsystem Scientist.\\
+\vspace{0.1cm}
+{\color{blue}Michelle Butler} replaces Don Petravick as Infrastructure Product Owner.\\
+\vspace{0.1cm}
+New Release Manager {\color{blue} Gabriele Comoretto}.\\
+\vspace{0.1cm}
+Deputies {\color{blue}John Swinbank} (PM), {\color{blue}Colin Slater} (PS), {\color{blue}Yusra AlSayyad} (Pipelines) and {\color{blue}Vaikunth Thukral} (DAX).\\
+\vspace{0.2cm}
+{\color{red} Toughest thing in any project is communication.}
+}
+\end{columns}
+}
+
+\frame {\frametitle{Build and Deploy with a view to Ops}
+\vspace{-1cm}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{center}
+\vspace{-0.5cm}
+      \includegraphics[width=1.0\textwidth]{images/DMSDeployment}\\
+\vspace{-5.3cm}
+      \includegraphics[width=0.8\textwidth]{images/linesOfCode}\\
+\end{center}
+\column{0.5\textwidth}
+ \\
+\vspace{0.5cm}
+DM must build everything to get LSST data products---as described in \citeds{LSE-163}---to end users.
+\begin{itemize}
+\item Large data sets (20\,TB/night)
+\item Complex analysis with small systematics
+\item Science alerts issued within one minute
+\end{itemize}
+$\sim{}^3\!/_4$ million lines of code/comments (C++/Python/Java/JavaScript/Kotlin)\\
+See SPIE paper by \cite{2018SPIE10707E..09J}\\
+\vspace{5pt}
+Architecture and Components  \citeds{LDM-148}.\\
+ Concept of Operations \citeds{LDM-230}.\\
+\vspace{5pt}
+{\tiny Upper diagram courtesy K-T Lim, \citeds{LDM-148}. }\\
+{\tiny Lower diagram by Tim Jenness; covers only the Science Pipelines
+codebase.}
+\end{columns}
+}
+
+\input{stack}
+
+\frame {\frametitle{All Comes Down to Images }
+\vspace{-5mm}
+\begin{columns}
+\column{0.45\textwidth}
+\vspace{-2mm}
+\begin{center}
+      \includegraphics[width=1.0\textwidth]{images/ImSim-2011-half}\\
+\end{center}
+\column{0.5\textwidth}
+ \\
+\vspace{0.1cm}
+Simulated image based on three filters\\
+{\color{red} From just one of 189 CCDs}\\
+\vspace{3mm}
+Processed through the\\\textit{LSST Science Pipelines}\\\url{https://pipelines.lsst.io/}\\
+The Pipelines are already in use with other facilities, e.g. Hyper Suprime-Cam.\\
+\vspace{3mm}
+Still working on performance, algorithmic enhancements, orchestration, etc.\\
+\vspace{3mm}
+Design \citeds{LDM-151}; Test Specs \citeds{LDM-533, LDM-534}; Test Reports \citeds{DMTR-52, DMTR-53}
+\end{columns}
+}
+
+
+\frame  {\frametitle{DM Document Tree }
+\begin{center}
+ \includegraphics[width=0.95\textwidth]{images/DocTree}
+\end{center}
+}
+
+\frame  {\frametitle{End-User Documentation on the Web }
+See \url{lsst.io},  \url{pipelines.lsst.io}, \url{nb.lsst.io}
+\hspace{-1cm}
+\begin{center}
+ \includegraphics[width=0.9\textwidth]{images/EndUserDocs}
+\end{center}
+}
+
+\frame{\frametitle{Test Driven Schedule LDM-503 }
+\begin{columns}
+\column{0.70\textwidth}
+ \includegraphics[width=1.0\textwidth]{images/DMMasterSchedule}
+\column{0.30\textwidth}
+\\
+\vspace {-8.1cm}
+DM adopted a test driven schedule to address verification and progress.\\
+\vspace {0.5cm}
+In line with the approach taken by project-level Systems Engineering --- adapting our test specs to Jira test manager system.\\
+\vspace {0.5cm}
+{\color{red} \citeds{LDM-503} (test plan) and \citeds{LDM-564} (releases)  now automatically generated from P6}
+\end{columns}
+}
+
+\frame{\frametitle{Releases LDM-564 }
+High level features of all releases are listed in \citeds{LDM-564}. These coincide with the test milestones. \\
+Example {\textbf{LDM-503-7}: Camera Data Processing \label{LDM-503-7}}
+\begin{itemize}
+\item{Camera package supporting the LSST Camera. (DM-DRP-5)}
+\item{LSSTCam data display and visualization. (DM-SUIT-6)}
+\item{Mapping between SUIT systems \& NCSA auth system. (DM-SUIT-7)}
+\item{SUIT portal integrated with workspace. (DM-SUIT-8)}
+\item{Basic instrument signature removal (ISR) capability. (DM-AP-7)}
+\item{Camera package supporting the Commissioning Camera. (DM-DRP-38)}
+\item{Calibration product generation in support of basic ISR. (DM-DRP-4)}
+\end{itemize}
+The test specs provide further refinement on the delivered product. The bracketed tag is a level 3 milestone in P6.
+}
+
+
+
+\frame{\frametitle{Verification and Validation }
+\textbf{Verification}: Have we built everything we are supposed to build?
+\begin{itemize}
+\item In line with the Project's System Engineering approach
+\item Demonstrate that we cover all requirements on DM
+\item \citeds{LDM-503} shows the DM verification matrix
+\end{itemize}
+\textbf{Validation}: Have we built the right thing and does it work as expected?
+\begin{itemize}
+\item Must tackle \textit{both} Scientific \textit{and} Operational Validation
+\item Talking with with Commissioning Team: some \textit{rehearsals} will be joint
+\item {\bf There is no difference between DM Science Validation and Commissioning Science Validation --- DM will work closely with Commissioning Team}.
+\end{itemize}
+
+\begin{center}
+\textbf{\citeds{LDM-503}} addresses DM's plans for verification \& validation.
+\end{center}
+}
+
+\frame{\frametitle{DM Verification Details }
+\begin{itemize}
+\item Test Specification
+\begin{itemize}
+\item All tests relating to a DM product (or group thereof)  - do we have not done this precisely and now all will be in Jira
+\end{itemize}
+\item Test planning
+\begin{itemize}
+\item DM Test Plan (LDM-503) defines a set of test milestones to be fulfilled
+\item For each Milestone a Test Plan has to be defined in Jira, with a corresponding Test Run(s)
+\item A draft Test Report can be generated and uploaded in DocuShare as a reference for the planned test activity.
+\end{itemize}
+
+\item Test Execution - Using the Test Player
+\begin{itemize}
+\item Comments, Jira issues, and additional information can be added in Jira
+\item A final assessment can be included in Jira for the Test Run
+\end{itemize}
+
+\item Test Reporting
+\begin{itemize}
+\item Once the test activity is run the Test Report (DMTR) will be generated from Jira e.g. \citeds{DMTR-91},  and uploaded in  DocuShare.
+\end{itemize}
+
+
+\end{itemize}
+}
+
+\input{goals}
