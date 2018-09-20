@@ -77,7 +77,7 @@ Deputies {\color{blue}John Swinbank} (PM), {\color{blue}Colin Slater} (PS), {\co
 \end{center}
 \column{0.5\textwidth}
  \\
-\vspace{0.5cm}
+\vspace{0.1cm}
 DM must build everything to get LSST data products---as described in \citeds{LSE-163}---to end users.
 \begin{itemize}
 \item Large data sets (20\,TB/night)
@@ -89,13 +89,13 @@ See SPIE paper by \cite{2018SPIE10707E..09J}\\
 \vspace{5pt}
 Architecture and Components  \citeds{LDM-148}.\\
  Concept of Operations \citeds{LDM-230}.\\
-\vspace{5pt}
+\vspace{1pt}
 {\tiny Upper diagram courtesy K-T Lim, \citeds{LDM-148}. }\\
 {\tiny Lower diagram by Tim Jenness; covers only the Science Pipelines
 codebase.}
 \end{columns}
 }
-
+\input{dac}
 
 \frame {\frametitle{All Comes Down to Images }
 \vspace{-5mm}
@@ -121,6 +121,7 @@ Design \citeds{LDM-151}; Test Specs \citeds{LDM-533, LDM-534}; Test Reports \cit
 }
 
 \input{stack}
+\input{alerts}
 
 \frame  {\frametitle{DM Document Tree }
 \begin{center}
@@ -151,7 +152,7 @@ In line with the approach taken by project-level Systems Engineering --- adaptin
 \end{columns}
 }
 
-\frame{\frametitle{Releases LDM-564 }
+\frame{\frametitle{Software Releases LDM-564 }
 High level features of all releases are listed in \citeds{LDM-564}. These coincide with the test milestones. \\
 Example {\textbf{LDM-503-7}: Camera Data Processing \label{LDM-503-7}}
 \begin{itemize}
@@ -185,34 +186,6 @@ The test specs provide further refinement on the delivered product. The brackete
 \begin{center}
 \textbf{\citeds{LDM-503}} addresses DM's plans for verification \& validation.
 \end{center}
-}
-
-\frame{\frametitle{DM Verification Details }
-\begin{itemize}
-\item Test Specification
-\begin{itemize}
-\item All tests relating to a DM product (or group thereof)  - do we have not done this precisely and now all will be in Jira
-\end{itemize}
-\item Test planning
-\begin{itemize}
-\item DM Test Plan (LDM-503) defines a set of test milestones to be fulfilled
-\item For each Milestone a Test Plan has to be defined in Jira, with a corresponding Test Run(s)
-\item A draft Test Report can be generated and uploaded in DocuShare as a reference for the planned test activity.
-\end{itemize}
-
-\item Test Execution - Using the Test Player
-\begin{itemize}
-\item Comments, Jira issues, and additional information can be added in Jira
-\item A final assessment can be included in Jira for the Test Run
-\end{itemize}
-
-\item Test Reporting
-\begin{itemize}
-\item Once the test activity is run the Test Report (DMTR) will be generated from Jira e.g. \citeds{DMTR-91},  and uploaded in  DocuShare.
-\end{itemize}
-
-
-\end{itemize}
 }
 
 \input{goals}

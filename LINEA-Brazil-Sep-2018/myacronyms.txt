@@ -55,6 +55,7 @@ LIT:LSST Issue Tracker
 LOE:Level Of Effort
 LPM:LSST Project Management (Document Handle)
 LSE:LSST Systems Engineering (Document Handle)
+MEF:Multi Extension FITS
 MC:Monte-Carlo (simulation/process)
 NCOA:National Center for Optical-Infrared Astronomy
 NCSA:National Center for Supercomputing Applications
