@@ -1,0 +1,97 @@
+AI:Action Item
+AI\&T:Assembly, Integration and Test
+AP:Alerts Production
+AURA:Association of Universities for Research in Astronomy
+BAC:Budget At Completion
+BOE:Basis Of Estimate
+C:Specific programming language (also called ANSI-C)
+CAM:Control Account Manager
+CAS:Central Authentication System
+CCB:Change Control Board
+COB:Cluster On Board
+CR:Change Request
+DAC:Data Access Center
+DAX:Data Access Services
+DBB:Data BackBone
+DC:Data Center
+DCR:Document Change Request
+DM:Data Management
+DMCCB:DM Change Control Board
+DMCS:DM Control System AAA: Authentication Authorization and Accounting
+DMIS:DM Interface Scientist
+DMLT:DM Leadership Team
+DMO:Data Management Organization
+DMS:Data Management Sub-system
+DMSR:DM System Requirements
+DMSS:DM Subsystem Scientist
+DR:Data Release
+DRP:Data Release Production
+EFD:Engineering Facilities Database
+ETC:Estimate To Complete
+EVMS:Earned Value Management System
+FDR:Final Design Review
+FM:Flat Mirror 
+GB:GigaByte
+GWT:Google Web Toolkit
+HSC:Hyper Suprime-Cam
+http:HyperText Transfer Protocol
+IPAC:Infrared Processing and Analysis Center
+IS:Interface Scientist
+ISR:Instrument Signal Removal
+IT:Integration Test
+JSR:Joint Status Review
+JTM:Joint Technical Meeting
+KPM:Key Performance Metric
+L1:Level 1 (ambiguous could mean milestone or processing)
+L2:Level 2 (ambiguous could mean milestone or processing)
+LHC:Large Hadron Collider (at CERN)
+LCR:LSST Change Request
+LIT:LSST Issue Tracker
+LOE:Level Of Effort
+LPM:LSST Project Management (Document Handle)
+LSE:LSST Systems Engineering (Document Handle)
+MC:Monte-Carlo (simulation/process)
+NCOA:National Center for Optical-Infrared Astronomy
+NCSA:National Center for Supercomputing Applications
+NSF:National Science Foundation
+OCS:Observatory Control System
+OPS:OPerationS
+OSS:Operations Support System
+PB:PetaByte
+PDAC:Prototype Data Access Center
+PDF:Portable Document Format
+PFS:Prime Focus Spectrograph
+PM:Project Manager
+PMCS:Project Management Control System
+PS:Project Scientist
+PST:Project Science Team
+Qserv:Query Service, Proprietary LSST Database system
+RTM:Rear Transition Module
+SA:Science Alert(s)
+SAMP:Simple Application Messaging Protocol
+SEMP:Systems Engineering Management Plan
+SP:Software Product
+SQuaRE:Science Quality and Reliability Engineering
+SRS:Software Requirements Specification
+SS:Subsystem Scientist
+SST:System Science Team
+STS:System Test Specification
+SUI:Science User Interface Tools
+SUIT:Science User Interface and Tools
+SV:Science Validation
+SW:Software (also denoted S/W)
+TB:TeraByte
+TCAM:Technical Control/Account Manager
+TCAMS:Technical Control/Account Manager
+TCS:Telescope Control System
+TCT:Technical Control Team (Obsolete -- now DMCCB)
+TPR:Test Plan and Report document
+TS:Test Specification
+US:United States
+USD:United States Dollar
+UW:University of Washington
+UX:User interface widget
+VCD:Verification Control Document
+VO:Virtual Observatory
+WAN:Wide Area Network
+bps:bit(s) per second
