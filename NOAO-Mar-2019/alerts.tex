@@ -1,0 +1,34 @@
+
+\frame{\frametitle{Alerts: identify time varying objects }
+\begin{center}
+\includegraphics[width=0.9\textwidth]{images/alertFlow}\\
+\vspace{-5pt}
+\hfill {\tiny \bf Figure from Eric Bellm}
+\end{center}
+}
+
+\frame{\frametitle{Brokers  }
+\begin{itemize}
+\item LSST Mini Broker - Users can create filters that return
+\begin{itemize}
+\item a subset of LSST alerts based only on data in the alert packet
+\item  can use lightcurve, variability parameters, colors, etc.,
+\item no crossmatch to external catalogs
+\item Runs in the LSST Data Access Center(-> users must have data rights)
+\end{itemize}
+
+ \item Community Alert Brokers -  further enabling science on alerts {\em e.g.}:
+\begin{itemize}
+\item Provide public access to alerts
+\item Classification and Crossmatch to other catalogs or data streams
+\item Provide filtering, visualization, and search
+\item Coordinate scientific activity and/or followup observations
+\item Aggregate alert annotations (community classifications, etc.)
+\end{itemize}
+
+\item Call has gone out for community brokers
+\item {\color{red}Mini Broker capacity/Number of community brokers  limited by bandwidth}
+\end{itemize}
+see also \citeds{LDM-612}
+}
+

@@ -1,3 +1,5 @@
+\input{sciplat}
+
 \frame { \frametitle{ LSST:uniform sky survey }
 \begin{columns}
 \column{0.5\textwidth}
@@ -17,23 +19,9 @@ An optical/near-IR survey of half the sky in ugrizy bands to r~27.5 (36 nJy) bas
 
 \column{0.5\textwidth}
 	 \includegraphics[width=1.1\textwidth]{images/coverage}\\
-{\bf 10-year simulation of LSST survey: number of visits in u,g,r band (Aitoff projection of eq. coordinates) }\\
+{\bf 10-year simulation : number of visits in u,g,r band (Aitoff projection of eq. coordinates) }\\
 \end{columns}
 
-}
-\frame { \frametitle{ LSST Camera }
-\begin{columns}
-\column{0.65\textwidth}
- \includegraphics[width=1.0\textwidth]{images/camera}
-\column{0.35\textwidth}
- \\
-\vspace {-5cm}
-{\large \bf The largest astronomical camera:}
-\begin {itemize}
-\item 2800 kg
-\item 3.2 Gpix
-\end {itemize}
-\end{columns}
 }
 
 \frame {\frametitle{ Data management }
@@ -50,11 +38,45 @@ An optical/near-IR survey of half the sky in ugrizy bands to r~27.5 (36 nJy) bas
     \vspace{7pt}
 LSST DM development is distributed across the Americas.\\
 
-{\color{blue} Plus we have partners like IN2P3}
+{\color{blue} Plus we have partners like IN2P3}\\
+See Management Plan \citeds{LDM-294}.
 
 }
 
-\frame {\frametitle{SDSS image }
+
+
+\frame {\frametitle{Build and Deploy with a view to Ops}
+\vspace{-1cm}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{center}
+\vspace{-0.5cm}
+      \includegraphics[width=1.0\textwidth]{images/DMSDeployment}\\
+\vspace{-5.3cm}
+      \includegraphics[width=0.8\textwidth]{images/linesOfCode}\\
+\end{center}
+\column{0.5\textwidth}
+ \\
+\vspace{0.2cm}
+DM must build everything to get LSST data products---as described in \citeds{LSE-163}---to end users.
+\begin{itemize}
+\item Large data sets (20\,TB/night)
+\item Complex analysis with small systematics
+\item Science alerts issued within one minute
+\end{itemize}
+$\sim{}^3\!/_4$ million lines of code/comments (C++/Python/Java/JavaScript/Kotlin)\\
+See SPIE paper by \cite{2018SPIE10707E..09J}\\
+\vspace{2pt}
+Architecture and Components  \citeds{LDM-148}.\\
+ Concept of Operations \citeds{LDM-230}.\\
+\vspace{1pt}
+{\tiny Upper diagram courtesy K-T Lim, \citeds{LDM-148}. }\\
+{\tiny Lower diagram by Tim Jenness; covers only the Science Pipelines
+codebase.}
+\end{columns}
+}
+
+\frame {\frametitle{All comes down to image- SDSS example }
 	\vspace{-1mm}
 	\begin{columns}
 		\column{0.5\textwidth}
@@ -77,15 +99,17 @@ LSST DM development is distributed across the Americas.\\
 	      \includegraphics[width=1.0\textwidth]{images/HSCcosmos}\\
 		      \column{0.5\textwidth}
 		       \\
-		       \vspace{1cm}
 		       HSC image (COSMOS) from g,r(1.5 hrs) ,i(3 hrs) PSF matched co-add ($\approx 27.5$)\\
 		       \vspace{3mm}
 		       Processed with  {\em LSST Stack} \url{https://pipelines.lsst.io/}\\
 		       \vspace{10mm}
+YES the Pipelines are already in use with other facilities like Hyper Suprime-Cam.\\
+\vspace{3mm}
+Still working on performance, algorithmic enhancements, orchestration, etc.\\
+\vspace{3mm}
+Design \citeds{LDM-151}; Test Specs \citeds{LDM-533, LDM-534}; Test Reports \citeds{DMTR-52, DMTR-53}
 	       {\tiny \bf{Image HSC collaboration,  Robert Lupton}}
 	       \end{columns}
        }
-
-
-
+\input{alerts}
 
