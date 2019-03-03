@@ -6,7 +6,7 @@ tex=$(filter-out $(wildcard *acronyms.tex) , $(wildcard *.tex))
 
 OBJ=$(SRC:.tex=.pdf)
 
-all: $(OBJ)
+all: $(OBJ) 
 
 $(OBJ): %.pdf : %.tex
 	latexmk -bibtex -xelatex -f $<
