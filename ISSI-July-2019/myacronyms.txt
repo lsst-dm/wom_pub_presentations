@@ -1,0 +1,13 @@
+
+ITC:Information Technology Center
+bps:bit(s) per second
+
+CAM:CAMera
+CIL:Configuration Item List
+GAVIP:Gaia Added Value Interface Platform
+AGIS:Astrometric Global Iterative Solution
+CU:Coordination Unit
+ESOC:European Space Operations Centre
+ESTEC:European Space Technology Engineering Centre
+ISSI:International Space Science Institute
+IR:Infra Red

@@ -1,0 +1,161 @@
+\frame { \frametitle{ LSST:uniform sky survey }
+\begin{columns}
+\column{0.45\textwidth}
+\vspace {-5.5cm}
+ \\
+An optical/near-IR survey of half the sky in ugrizy bands to r~27.5 (36 nJy) based on 825 visits over  a 10-year period: {\em deep wide fast}.
+%It’s about 5,000 sq. deg. per night, *twice*, on
+%average. That is, about 1,000 visits per night on average. You return to
+%the same position on the sky in about 3-4 nights (in any band). Btw, it’s
+%a nice coincidence worth remembering that the total exposure time per
+%position over 10 years (in all bands) is equal to about one observing night.
+\begin{itemize}
+\item 90\% of time  spent on  uniform survey: every 3-4 nights, the whole observable sky scanned twice per night
+\item	~100 PB of data: about a billion 16 Mpix images, enabling measurements\\ {\color{cyan} for 40 billion objects! }
+\end{itemize}
+{\tiny see also \url{http://www.lsst.org} and \cite{2008arXiv0805.2366I}-arXiv:0805.2366}
+
+\column{0.55\textwidth}
+	 \includegraphics[width=0.9\textwidth]{images/coverage}\\
+\vspace {-5pt}
+{\bf 10-year simulation of LSST survey: number of visits in u,g,r band (Aitoff projection of eq. coordinates) }\\
+\end{columns}
+
+}
+\frame { \frametitle{ LSST Camera }
+\begin{columns}
+\column{0.65\textwidth}
+ \includegraphics[width=1.0\textwidth]{images/camera}
+\column{0.35\textwidth}
+ \\
+\vspace {-5cm}
+{\large \bf The largest astronomical camera:}
+\begin {itemize}
+\item 2800 kg
+\item 3.2 Gpix
+\end {itemize}
+\end{columns}
+}
+
+\frame { \frametitle{ Site as imagined and in March 2019 }
+\begin{columns}
+\begin{column}{0.5\textwidth}
+	\includegraphics[width=0.95\textwidth,trim=0cm 10cm 0 10cm,clip]{images/cerroRender}
+\end{column}
+\begin{column}{0.5\textwidth}
+\\
+\vspace{+2cm}
+	\includegraphics[width=0.95\textwidth,trim=0cm 0cm 5cm 0cm,clip]{images/cerroMar2019}
+\end{column}
+\end{columns}
+
+}
+
+\frame {\frametitle{  DM build and deploy - already challenging }
+	\vspace{-1cm}
+	\begin{columns}
+		\column{0.4\textwidth}
+		\begin{center}
+			      \includegraphics[width=1.0\textwidth]{images/DMSDeployment}\\
+		      \end{center}
+		      \column{0.6\textwidth}
+		       \\
+		       \vspace{1cm}
+		       DM must build everything to get LSST products (see \url{http://ls.st/dpdd})  to the users.
+		       \begin{itemize}
+			       \item large data sets (20TB/night)
+			       \item complex analysis
+			       \item aiming for small systematics
+			       \item Science Alerts in under 2 minutes .. (aiming for 1 minute)
+		       \end{itemize}
+		       About $1\over{2}$  million lines of code (C++/python) all open source on github\\
+		       \vspace{25pt}
+		       {\tiny \bf diagram K.T. Lim}
+	       \end{columns}
+       }
+
+
+
+\frame {\frametitle{  Data Backbone}
+\begin{columns}
+\column{0.45\textwidth}
+      \includegraphics[width=1.0\textwidth]{images/DataBackbone}\\
+\column{0.55\textwidth}
+ \\
+ \vspace{-5cm}
+ One small box on the previous slide was Data Backbone.\\ That hides several things \\
+ \begin{itemize}
+	 \item Qserv - the LSST end user database
+ \begin{itemize}
+	 \item{\color{red} Custom Massive Parallel Processing (MPP) }
+	 \item allow queries on $\approx 20$ Petabytes of tabular data
+	\item $4 \times 10^{10}$ objects, $4 \times 10^{13}$ sources (observations)
+ \end{itemize}
+\item All the networks : we now have fiber to the mountain and from La Serena to NCSA (two routes)
+ \end{itemize}
+\vspace{25pt}
+{\tiny \bf diagram K.T. Lim}
+\end{columns}
+}
+
+\frame {\frametitle{Data flow }
+\begin{columns}
+\column{0.65\textwidth}
+      \includegraphics[width=1.0\textwidth]{images/NearRealTimeDataFlow}\\
+\column{0.35\textwidth}
+\\
+\vspace{-6cm}
+Lots to do every night ..\\
+Plus annually there is a data release \\
+      \includegraphics[width=1.0\textwidth]{images/AnnualReprocessingDataFlow}\\
+
+      {\tiny \bf Images from K.T. Lim}
+\end{columns}
+}
+
+\frame {\frametitle{SDSS image }
+	\vspace{-1mm}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\vspace{-2mm}
+	      \includegraphics[width=1.0\textwidth]{images/SDSScosmos}\\
+		      \column{0.5\textwidth}
+		      \\
+		       \vspace{1cm}
+	       Nice colors \cite{2004PASP..116..133L}\\
+	       $\approx  3.5 \arcmin$\\
+		       \vspace{20mm}
+	       {\tiny \bf{Image  Robert Lupton}}
+	       \end{columns}
+}
+\frame {\frametitle{Hyper Suprime Cam (HSC) on Subaru }
+	\vspace{-1mm}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\vspace{-2mm}
+	      \includegraphics[width=1.0\textwidth]{images/HSCcosmos}\\
+		      \column{0.5\textwidth}
+		       \\
+		       \vspace{-0.1cm}
+		       HSC image (COSMOS) from g,r(1.5 hrs) ,i(3 hrs) PSF matched co-add ($\approx 27.5$)\\
+		       Challenges:
+
+\begin{itemize}
+\item Unknown statistical distributions,   Truncated, censored and missing data, Unreliable quantities (e.g. unknown systematics and random errors)
+\item PSF - short exposure - atmosphere dominated ?
+
+\begin{itemize}
+\item cosmic shear signal from weak lensing
+\end{itemize}
+\item Photometry  challenging - will Gaia help LSST ..
+\item Everything is blended!!
+\end{itemize}
+		       \vspace{10mm}
+		{\tiny       Processed with  {\em LSST Stack} \url{https://pipelines.lsst.io/}\\
+	        \bf{Image HSC collaboration,  Robert Lupton}}
+	       \end{columns}
+       }
+
+
+
+

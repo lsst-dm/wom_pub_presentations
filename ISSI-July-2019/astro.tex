@@ -1,0 +1,43 @@
+\section{Astrometry}
+\frame {\frametitle{ Astrometric Solution}
+Just one part of the Gaia processing !\\
+From the Hipparcos catalogue
+\cite[Volume 3 Chapter 23]{hip:catalogue}.
+
+\begin{block}{Minimisation problem for astrometry}
+\begin{equation}
+	 ^{min}_{\bfvec{a},\bfvec{n}} \| \bfvec{g^{obs}} - \bfvec{g^{calc}}(\bfvec{a},\bfvec{n})\|_{M}
+	\label{eq:generalobs}
+\end{equation}
+\end{block}
+\begin{itemize}%[<+->]
+\item $\bfvec{a}$  is the vector of unknowns describing a star's barycentric motion
+represented by the measurement vector $\bfvec{g_{k}} = (G_{k},H_{k})^{\prime}$
+and associated statistics.
+\item $\bfvec{g^{obs}}$ represents the vector of all measurements
+\item  $\bfvec{g^{calc}}$ represents the vector of detector
+coordinates calculated from the astrometric parameters.
+\item $\bfvec{n}$ is a vector
+of nuisance parameters - required for realistic modeling (e.g. attitude, instrument calibration)
+
+\item   $M$ metric defined by the statistics
+of the data, (error weighting)
+
+\end{itemize}
+The complete new formulation for Gaia is in \citep{2012A&A...538A..78L}.
+}
+
+
+\frame {\frametitle{ Basic Gaia Problem }
+%\vspace{-10pt}
+Put more simply the data reduction must:\\
+{\em
+find the astrometric parameters (catalogue) best
+predicting the ($10^{12}$) focal plane observations of the sources.
+\citep{2011ExA....31..215O}
+}
+\begin{center}
+\includegraphics[scale=0.6, clip=true,trim=1cm 0cm 0 1.5cm ]{gaiaim/predict}
+\end{center}
+}
+
