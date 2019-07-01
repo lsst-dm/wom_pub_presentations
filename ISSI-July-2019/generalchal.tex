@@ -1,23 +1,71 @@
 
+\frame{\frametitle{General Challenge : Data volume }
+See also  \cite{2019arXiv190505116B}\\
+{\large Soon, if not already, Data will be looking for astronomers not vice versa.}
+\begin{itemize}
+\item Proprietary data may have had its day .. if we want people to look at data we need to remove barriers.
+%Should lSST e the las t?
+\item Networks and infrastructure are improving but more needs to be done
+\item Who looks after all the data ?
 
-\frame[allowframebreaks]{\frametitle{More generally for astronomy  }
-Material  drawn from \cite{2019arXiv190505116B}\\
-We have issues/challenges  :
+\begin{itemize}
+\item For space science in Europe ESAC preserves data - it is relatively small
+\item IPAC,  HEASARC and STScI  pretty much deal with NASA data - still not one location.
+\item Who looks after all the ground based data ?
+\item There is no long term preservation plan for LSST or other big telescopes in the USA (Alex wil probably have more to say on this)
+\end{itemize}
+%(LSST spent 10s of millions on netowrks)
+\end{itemize}
+}
+
+\frame{\frametitle{Architecture }
+
+We all constantly redesign and rebuild wheels, this will become too expensive as data volume grows ..
+\vspace{-10pt}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+
+\includegraphics[width=\textwidth]{images/CI-LSST}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\begin{itemize}
+\item We should agree a component based cyber infrastructure  model and work on improving specific components to plug in
+  - right now we are all building TAP, Designing Databases , deploying Jupyter \ldots
+\item Data models like CAOM from IVOA are going to be essential going forward so we can inter-operate on data
+\end{itemize}
+\end{column}
+\end{columns}
+{\bf \color{red} Filesystems are End Of Life } - object stores should not be confused with the object databases many of us struggled with in the 90s and 00s ..  Google and Amazon do not run filesystems they run object stores.
+}
+
+
+\frame{\frametitle{Processing patterns }
+\begin{itemize}
+\item LSST allows 9 months for a Data Release Processing Cycle - probably about 6 months actual processing.
+\item The original requirement for Gaia astrometric solution was three months.
+\item Traditional batch systems and shared nothing architecture may not always work
+
+	\begin{itemize}
+	\item Gaia Astrometric Solution required temporal spatial access and had global matrices
+\item There are processes for LSST which will have similar problems e.g. Forward Global Calibration Model (FGCM) \url{https://github.com/lsst/fgcmcal} \citep{2018AJ....155...41B}
+	\end{itemize}
+\item preparing and staging for tasks can take ever longer as our processing becomes more sophisticated
+\end{itemize}
+}
+
+
+\frame{\frametitle{Software is no longer an afterthought}
+
 \begin{itemize}
 
-\item Data volume - data will be looking for astronomers not vice versa
+\item In ESA (personal opinion) Gaia was a game changer - the Software was seen as critical - I had to fight to keep it off the Launch Critical Items List.  We still had a meager 10\% or so of the budget.
 
-	\begin{itemize}
-	\item Should LSST be one of the last missions with proprietary data?
-	\item Networks and infrastructure
-	\item Commodity services ..
-	\item Long term preservation
-	\end{itemize}
-\item Data models and interoperability
-\item Long term software support and software eco system
+\item LSST recognized early on that the processing was as important as the telescope  - DM is one of 4 Subsystem with about 20\% of the project budget
+\item We need to consider  long term software support and the software eco system
 	\begin{itemize}
 	\item Open source and publicly scrutinized algorithms
-	\item Agree community cyber infrastructure model
+	\item Agree community cyber infrastructure model (previous slide)
 	\item Educate astronomers/managers on how to \emph{open source}
 	\item Though I made my career in astronomy/computing .. its not easy .. and I really had to do the management thing
 
