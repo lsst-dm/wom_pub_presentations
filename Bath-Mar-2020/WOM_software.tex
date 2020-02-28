@@ -1,0 +1,42 @@
+\PassOptionsToPackage{table}{xcolor}
+\documentclass[aspectratio=169]{beamer}
+
+\input{../extras}
+
+\usepackage[fonts=false, position={DM Project Manager},
+footline={William O'Mullane \hfill  Software and big data \hfill}]{LSST-beamer}
+
+
+\title[Software/  Big Data ]{Software and big data from astronomy }
+
+
+
+% ----------------------
+
+%\usetikzlibrary{calc}
+
+
+\begin{document}
+\maketitle
+
+\input{intro}
+\input{lsst}
+\input{gaia}
+\input{dataaccess}
+\input{generalchal}
+\input{teams}
+
+\frame[allowframebreaks]{\frametitle{ Acronyms }
+\vspace{10pt}
+\tiny
+\input{acronyms}
+}
+\frame{\frametitle{ References }
+\tiny
+\bibliographystyle{lsst_aa}
+\bibliography{local,gaia_livelink_valid,lsst,refs,books,refs_ads}
+
+\normalsize
+
+}
+\end{document}

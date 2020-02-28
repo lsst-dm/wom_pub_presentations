@@ -1,0 +1,180 @@
+\frame { \frametitle{ LSST:uniform sky survey }
+\begin{columns}
+\column{0.45\textwidth}
+\vspace {-0.3cm}
+ \\
+An optical/near-IR survey of half the sky in ugrizy bands to r~27.5 (36 nJy) based on 825 visits over  a 10-year period: {\em deep wide fast}.
+%It’s about 5,000 sq. deg. per night, *twice*, on
+%average. That is, about 1,000 visits per night on average. You return to
+%the same position on the sky in about 3-4 nights (in any band). Btw, it’s
+%a nice coincidence worth remembering that the total exposure time per
+%position over 10 years (in all bands) is equal to about one observing night.
+\begin{itemize}
+\item 90\% of time  spent on  uniform survey: every 3-4 nights, the whole observable sky scanned twice per night
+\item	~100 PB of data: about a billion 16 Mpix images, enabling measurements\\ {\color{cyan} for 40 billion objects! }
+\end{itemize}
+{\tiny see also \url{http://www.lsst.org} and \cite{2008arXiv0805.2366I}-arXiv:0805.2366}
+
+\column{0.55\textwidth}
+	 \includegraphics[width=0.9\textwidth]{images/coverage}\\
+\vspace {-5pt}
+{\bf 10-year simulation of LSST survey: number of visits in u,g,r band (Aitoff projection of eq. coordinates) }\\
+\end{columns}
+
+}
+\frame { \frametitle{ LSST Camera }
+\begin{columns}
+\column{0.6\textwidth}
+ \includegraphics[width=1.0\textwidth]{images/camera}
+\column{0.4\textwidth}
+ \\
+\vspace {-3cm}
+{\large \bf The largest astronomical camera:}
+\begin {itemize}
+\item 2800 kg
+\item 3.2 Gpix
+\end {itemize}
+\end{columns}
+}
+
+\frame { \frametitle{ Site as imagined and in March 2019 }
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\vspace {7cm}
+	\includegraphics[width=0.95\textwidth,trim=0cm 10cm 0 10cm,clip]{images/cerroRender}
+\end{column}
+\begin{column}{0.5\textwidth}
+\\
+	\includegraphics[width=0.95\textwidth,trim=0cm 0cm 5cm 0cm,clip]{images/cerroMar2019}
+\end{column}
+\end{columns}
+
+}
+
+\frame {\frametitle{  DM build and deploy - already challenging }
+	\vspace{-1cm}
+	\begin{columns}
+		\column{0.4\textwidth}
+		\begin{center}
+			      \includegraphics[width=1.0\textwidth]{images/DMSDeployment}\\
+		      \end{center}
+		      \column{0.6\textwidth}
+		       \\
+		       \vspace{1cm}
+		       DM must build everything to get LSST products (see \url{http://ls.st/dpdd})  to the users.
+		       \begin{itemize}
+			       \item large data sets (20TB/night)
+			       \item complex analysis
+			       \item aiming for small systematics
+			       \item Science Alerts in under 2 minutes .. (aiming for 1 minute)
+		       \end{itemize}
+		       About $1\over{2}$  million lines of code (C++/python) all open source on github\\
+		       \vspace{25pt}
+		       {\tiny \bf diagram K.T. Lim}
+	       \end{columns}
+       }
+
+
+ \input{wod}
+
+\frame{\frametitle{Guidelines,  tools,  conventions }
+\begin{itemize}
+    \item {\color{green} Its great having extensive guidelines - it was also something super on Gaia}
+   \item \url{developer.lsst.io} is a full developer guide - everythign from git commit messages to style guides for Python adn C+.
+   \item \url{pipelines.lsst.io} documents the main software release(s)
+	\begin{itemize}
+	\item worst of both worlds - it is a monolitic release  - but made up of > 120 git repos
+	\item Still using \emph{in house} tools like EUPS \url{https://github.com/RobertLuptonTheGood/eups}
+	\item moving toward conda-forge
+	\item {\color{green} All open source (GPL) on github.com}
+	\end{itemize}
+\item  Language (spoken/written) and conventions are also super important
+    \begin{itemize}
+	    \item Single language projects  (like US or UK) fall more easily in the trap of \emph{believing} they speak  about the same topics because they speak language X.
+	    \item {\color{blue} - on RubinObs we lack something foundaitonal like \citeds{LL:BAS-003}}
+    \end{itemize}
+
+\end{itemize}
+}
+
+
+
+\frame {\frametitle{  Data Backbone}
+\begin{columns}
+\column{0.45\textwidth}
+      \includegraphics[width=1.0\textwidth]{images/DataBackbone}\\
+\column{0.55\textwidth}
+ \\
+ One small box on the previous slide was Data Backbone.\\ That hides several things \\
+ \begin{itemize}
+	 \item Qserv - the LSST end user database
+ \begin{itemize}
+	 \item{\color{red} Custom Massive Parallel Processing (MPP) }
+	 \item allow queries on $\approx 20$ Petabytes of tabular data
+	\item $4 \times 10^{10}$ objects, $4 \times 10^{13}$ sources (observations)
+ \end{itemize}
+\item All the networks : we now have fiber to the mountain and from La Serena to NCSA (two routes)
+ \end{itemize}
+\vspace{25pt}
+{\tiny \bf diagram K.T. Lim}
+\end{columns}
+}
+
+\frame {\frametitle{Data flow }
+\begin{columns}
+\column{0.65\textwidth}
+      \includegraphics[width=1.0\textwidth]{images/NearRealTimeDataFlow}\\
+\column{0.35\textwidth}
+\\
+\vspace{-0.2cm}
+Lots to do every night ..\\
+Plus annually there is a data release \\
+      \includegraphics[width=1.0\textwidth]{images/AnnualReprocessingDataFlow}\\
+
+      {\tiny \bf Images from K.T. Lim}
+\end{columns}
+}
+
+\input{qserv}
+
+\frame {\frametitle{SDSS image }
+	\begin{columns}
+		\column{0.45\textwidth}
+	      \includegraphics[width=1.0\textwidth]{images/SDSScosmos}\\
+		      \column{0.55\textwidth}
+		      \\
+		       \vspace{1cm}
+	       Nice colors \cite{2004PASP..116..133L}\\
+	       $\approx  3.5 \arcmin$\\
+		       \vspace{20mm}
+	       {\tiny \bf{Image  Robert Lupton}}
+	       \end{columns}
+}
+\frame {\frametitle{Hyper Suprime Cam (HSC) on Subaru }
+\begin{columns}
+      \column{0.45\textwidth}
+		       \vspace{-20pt}
+	      \includegraphics[width=1.0\textwidth]{images/HSCcosmos}\\
+      \column{0.55\textwidth}
+		       \\
+		       HSC image (COSMOS) from g,r(1.5 hrs) ,i(3 hrs) PSF matched co-add ($\approx 27.5$)\\
+		       Challenges:
+
+\begin{itemize}
+\item Unknown statistical distributions,   Truncated, censored and missing data, Unreliable quantities (e.g. unknown systematics and random errors)
+\item PSF - short exposure - atmosphere dominated ?
+
+\begin{itemize}
+\item cosmic shear signal from weak lensing
+\end{itemize}
+\item Photometry  challenging - will Gaia help ..
+\item Everything is blended!!
+\end{itemize}
+		{\tiny       Processed with  {\em LSST Stack} \url{https://pipelines.lsst.io/}\\
+	        \bf{Image HSC collaboration,  Robert Lupton}}
+	       \end{columns}
+       }
+
+
+
+
