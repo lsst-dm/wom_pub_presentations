@@ -1,0 +1,91 @@
+
+\frame {\frametitle{ Parameters and data models }
+\begin{itemize}
+%\item Which value do we use for speed of light, measurements of Gaia instrument
+  \item Avoid different values of constants in peoples code \ldots
+  \item The Gaia Parameter Database was set up early on for this \citep{2005ESASP.576...67D}
+    \begin{itemize}
+      \item all constants in one place; web searchable configuration controlled (Only updated by Jos De Bruijne)
+      \item published as constants for Java (can also do C, Fortran\ldots) so you may refer to a particular version
+    \end{itemize}
+  \item then the actual data model --- what exactly is an AstroElementary?
+    \begin{itemize}
+      \item entire data model defined in multi-user dictionary tool; includes Units on each field.
+        \begin{itemize}
+          \item good for astronomers --- computer people find it harder to handle
+        \end{itemize}
+      \item from it we generate data instance classes and schemas for storage.
+      \item {\color{green} ONLY data model not processing} --- all objects are dumb (had discussion with KT  and Mario on this)
+	\item This was in UML (Rose) in the 90s but it was impractical to continue..
+	\item Rubin Obs also had Rational Rose and still have Magic Draw .. but the Data model is in python now more or less.
+    \end{itemize}
+  \item {\color{green} These are logical extensions of having agreed conventions\ldots}
+\end{itemize}
+}
+
+\input{wod}
+
+\frame {\frametitle{ Have a standard: DPAC follows ECSS, Rubin MBSE }
+\begin{columns}
+  \begin{column}{0.5\textwidth}
+%\pgfputat{\pgfxy(0,0)}{\pgfbox[left,top]{
+    %\begin{center}
+      \includegraphics[width=1.0\textwidth]{DocTree}\\
+    %\end{center}
+	  {\tiny Rubin Obs DM  Doctree (\citeds{LDM-294})}\hfill
+%}}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \vskip-0.3cm
+    \textbf{European Cooperation for Space Standardization}
+    \begin{itemize}
+      \item ECSS tailored as in figure
+        \begin{itemize}
+          \item LaTeX Templates/examples provided (by SOC)
+          \item Documents are iterated ---  All of this is done for all  products.
+          \item {\color{green} It is very good to have a standard set of documents augmented by technical notes and streamlined ECSS}
+          \item Some still found it too heavy --- other reports requested beyond the standard ones.
+        \end{itemize}
+      \item DPAC had sufficient QA people ($\sim1/$CU) from the start to help with this% and create examples and templates.
+    \end{itemize}
+  \end{column}
+\end{columns}
+}
+
+
+
+\frame{\frametitle{Development tools}
+\vspace{-8pt}
+\begin{itemize}
+  \item All DPAC code and docs in Subversion, hosted at ESAC
+    \begin{itemize}
+      \item Access control according to Group membership in the LDAP
+    \end{itemize}
+  \item Mantis for centralised issue tracking (includes risks and actions)
+    \begin{itemize}
+      \item ALL DPAC issues in one system hosted at ESTEC
+      \item {\color{red} Jira would probably be better }
+  \end{itemize}
+\pause
+  \item{\color{green} Having one language is good \citep{2011arXiv1108.0355O}} agreed 2006
+
+    \citeds{LL:JH-001} --- only one verification part is NOT in Java.
+    \begin{itemize}
+      \item Can have a library of standard  routines  GaiaTools (Relativity, Field Angle Calculator,
+        Ephemeris handling\ldots)
+        \begin{itemize}
+          \item {\color{red} The set of routines were not defined hence GaiaTools is a bit of
+          hodgepodge mess\ldots}
+          \item {\color{blue} Counter argument for common tools is (unnecessary)
+          interdependence\ldots}
+        \end{itemize}
+      \item all libs in Nexus  - builds against these {\color{green}no full builds}
+      \item builds with Ant; {\color{red} Maven might be the thing to use now}
+      \item automated builds with Hudson/Jenkins (previously cruisecontrol)
+      \item {\color{blue} virtual machines make some reasons for Java invalid} - LSST not ?
+    \end{itemize}
+\end{itemize}
+}
+
+
+
