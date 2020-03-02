@@ -75,28 +75,6 @@ An optical/near-IR survey of half the sky in ugrizy bands to r~27.5 (36 nJy) bas
        }
 
 
- \input{wod}
-
-\frame{\frametitle{Guidelines,  tools,  conventions }
-\begin{itemize}
-    \item {\color{green} Its great having extensive guidelines - it was also something super on Gaia}
-   \item \url{developer.lsst.io} is a full developer guide - everythign from git commit messages to style guides for Python adn C+.
-   \item \url{pipelines.lsst.io} documents the main software release(s)
-	\begin{itemize}
-	\item worst of both worlds - it is a monolitic release  - but made up of > 120 git repos
-	\item Still using \emph{in house} tools like EUPS \url{https://github.com/RobertLuptonTheGood/eups}
-	\item moving toward conda-forge
-	\item {\color{green} All open source (GPL) on github.com}
-	\end{itemize}
-\item  Language (spoken/written) and conventions are also super important
-    \begin{itemize}
-	    \item Single language projects  (like US or UK) fall more easily in the trap of \emph{believing} they speak  about the same topics because they speak language X.
-	    \item {\color{blue} - on RubinObs we lack something foundaitonal like \citeds{LL:BAS-003}}
-    \end{itemize}
-
-\end{itemize}
-}
-
 
 
 \frame {\frametitle{  Data Backbone}
@@ -120,22 +98,30 @@ An optical/near-IR survey of half the sky in ugrizy bands to r~27.5 (36 nJy) bas
 \end{columns}
 }
 
-\frame {\frametitle{Data flow }
-\begin{columns}
-\column{0.65\textwidth}
-      \includegraphics[width=1.0\textwidth]{images/NearRealTimeDataFlow}\\
-\column{0.35\textwidth}
-\\
-\vspace{-0.2cm}
-Lots to do every night ..\\
-Plus annually there is a data release \\
-      \includegraphics[width=1.0\textwidth]{images/AnnualReprocessingDataFlow}\\
+\input{qserv}
 
-      {\tiny \bf Images from K.T. Lim}
-\end{columns}
+\input{wod}
+
+\frame{\frametitle{Guidelines,  tools,  conventions }
+\begin{itemize}
+    \item {\color{green} Its great having extensive guidelines - it was also something super on Gaia}
+   \item \url{developer.lsst.io} is a full developer guide - everything from git commit messages to style guides for Python and C+.
+   \item \url{pipelines.lsst.io} documents the main software release(s)
+	\begin{itemize}
+	\item worst of both worlds - it is a monolithic release  - but made up of > 120 git repos
+	\item Still using \emph{in house} tools like EUPS \url{https://github.com/RobertLuptonTheGood/eups}
+	\item moving toward conda-forge
+	\item {\color{green} All open source (GPL) on github.com}
+	\end{itemize}
+\item  Language (spoken/written) and conventions are also super important
+    \begin{itemize}
+	    \item Single language projects  (like US or UK) fall more easily in the trap of \emph{believing} they speak  about the same topics because they speak language X.
+	    \item {\color{blue} - on RubinObs we lack something foundational like \citeds{LL:BAS-003}}
+    \end{itemize}
+
+\end{itemize}
 }
 
-\input{qserv}
 
 \frame {\frametitle{SDSS image }
 	\begin{columns}
@@ -172,9 +158,30 @@ Plus annually there is a data release \\
 \end{itemize}
 		{\tiny       Processed with  {\em LSST Stack} \url{https://pipelines.lsst.io/}\\
 	        \bf{Image HSC collaboration,  Robert Lupton}}
-	       \end{columns}
+\end{columns}
        }
 
 
+
+\frame{\frametitle{Catalog extraction }
+\begin{columns}
+      \column{0.45\textwidth}
+		       \vspace{-20pt}
+	      \includegraphics[width=1.0\textwidth]{images/square/jupyterlab_nb}\\
+      \column{0.55\textwidth}
+
+\begin{itemize}
+\item Identifying sources and disentangling them becomes more difficult as we have deeper images.
+\item Left our typical Jupyter setup runs
+
+\begin{itemize}
+\item  Insrtrument signature removeval
+\item  calibration
+\item  source extraction
+\item  overlay extracted information on cleaned image
+\end{itemize}
+\end{itemize}
+\end{columns}
+}
 
 

@@ -1,0 +1,95 @@
+
+\frame{\frametitle{Rubin Observatory Catalog 2035 }
+Astronomy catalogs tend to be highly structured, tabular, somewhat predictable access.
+
+\begin{columns}
+\begin{column}{0.45\textwidth}
+
+\begin{itemize}
+\item Data, by DR11:
+\begin{itemize}
+\item  ~60T rows (mostly ForcedSource)
+\item  ~10PB (mostly Source + ForcedSource + Object extra)
+\end{itemize}
+\item  Breakdown of most significant tables (rows x cols, storage):
+\begin{itemize}
+\item  Object: ~47B x 330, ~100TB
+\item  Object extra: ~1.5T x 7,600, ~1.2PB
+\item  Source: ~9T x 50, ~5PB
+\item  ForcedSource: ~50T x 6, ~2PB
+\end{itemize}
+\end{itemize}
+\end{column}
+\begin{column}{0.55\textwidth}
+\begin{itemize}
+\item Get an object or data for small area - <10 sec
+\item Scan through billions of objects - $\approx$ 1 hour
+\item Deeper analysis (Object\_*) - $\approx$ 8 hours
+\item Analysis of objects close to other objects -  $\approx$ 1 hour, even if full-sky
+\item Analysis that requires special grouping - $\approx$ 1 hour, even if full sky
+\item Source, ForcedSource scans - $\approx$ 12 hours
+\item Cross match \& anti-cross match with external catalogs - $\approx$ 1 hour
+\end{itemize}
+\end{column}
+\end{columns}
+}
+
+
+\frame{\frametitle{Qserv \tiny(slides from Fritz Muller) }
+
+\begin{columns}
+\begin{column}{0.6\textwidth}
+\begin{itemize}
+\item Shared-nothing MPP RDBMS (SQL, throughput, horizontal scaling)
+\item  Spherical partitioning with overlap (near-neighbor self-joins)
+\item  Shared scans (concurrent query load)
+\item  Replicated data (resiliency)
+\item  Fixed-purpose, dedicated hardware (cost, predictability)
+\end{itemize}
+\end{column}
+\begin{column}{0.4\textwidth}
+
+\includegraphics[width=0.90\textwidth]{images/spher}
+	 Tesselation see  \cite{2001misk.conf..638O}
+\end{column}
+\end{columns}
+
+Design optimized for use case + hardware efficiency \citeds{LDM-135}
+
+Built on project at SLAC, leverage existing tech within Stanford (MariaDB, MySQL Proxy,
+XRootD, Google protobuf, Flask)
+
+
+100\% open source  \url{https://github.com/LSST/Qserv}
+}
+
+\frame{\frametitle{Shared Nothing Massively Parallel Processing }
+
+\begin{columns}
+\begin{column}{0.45\textwidth}
+
+\includegraphics[width=1.1\textwidth]{images/distribute-combine}\\
+		Recent scale tests: \url{https://dmtr-071.lsst.io}\\
+		Perf and BigQuery: \citeds{Document-31100}
+\end{column}
+\begin{column}{0.5\textwidth}
+
+\begin{itemize}
+\item Ultimate target platform ~300 nodes in 2 international data-centers
+\item	Development cluster (CC-IN2P3):
+\begin{itemize}
+\item  400 cores, 800 GB memory, 500 TB storage
+\item  ~100 TB synthetic dataset on 2 x 25 nodes
+\end{itemize}
+\item Prototype Data Access Center (NCSA):
+\begin{itemize}
+	\item  500 cores, 4 TB memory, 700 TB storage
+	\item  ~100 TB science dataset (SDSS Stripe 82 +
+		WISE) on 30 nodes
+	\item  + HSC reprocessing + GAIA DR2 coming up
+\end{itemize}
+\end{itemize}
+\end{column}
+\end{columns}
+}
+
