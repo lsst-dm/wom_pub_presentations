@@ -1,0 +1,59 @@
+\frame{\frametitle{ The Era Of Surveys and Archives }
+\begin{columns}
+\column{0.65\textwidth}
+\includegraphics[width=1.0\textwidth,trim=0 0 0 0] {images/AstronomerCartoon}\\
+\column{0.35\textwidth}
+\\
+\vspace{-7.2cm}
+\includegraphics[width=1.0\textwidth,trim=0 0 0 0] {images/HSTpubs}\\
+{\tiny \url{https://archive.stsci.edu/hst/bibliography/pubstat.html}}\\
+
+{\small \ldots indicates  archival  research  probably play an important role in the scientific success of XMM-Newton
+\cite{2014AN....335..210N}}
+
+\end{columns}
+}
+
+
+\frame{\frametitle{ Gaia Archive}
+    \begin{tikzpicture}
+	  \node (viz) {
+  \includegraphics[width=0.7\textwidth,trim=0 0 0 0] {gaiaim/gaiaviz}
+	  };
+	  \node(a) [right=15mm of viz] {};
+	  \node (tap)[below=-20mm of a] {
+\includegraphics[width=0.4\textwidth,trim=0 0 0 0] {gaiaim/gaiatap}
+	  };
+
+    \end{tikzpicture}
+
+\hspace{10pt}
+All Gaia data is publicly accessible at \url{https://gea.esac.esa.int/archive/}
+}
+
+
+\frame{\frametitle{ LSST Science Platform}
+\begin{columns}
+\column{0.6\textwidth}
+\includegraphics[width=1.1\textwidth,trim=0 0 0 0] {fig-lsst-science-platform-extended} \\
+\column{0.4\textwidth}
+\vspace{-0.3cm}
+\\
+For DR2:
+\begin{itemize}
+\item Computing:2,400 cores ($\approx 18$ TFLOPs)
+\item File storage: $\approx 4 $PB  (VOSpace)
+\item Database storage: $\approx 3 $PB (MYDB)
+
+\end{itemize}
+\end{columns}
+\vspace{5pt}
+The Science Platform has three user facing aspects: the Portal (novice), the JupyterLab (intermediate), and the Web APIs (expert and remote tools).\\
+Vision: \citeds{LSE-319} --- Design: \citeds{LDM-542} --- Test: \citeds{DMTR-51}
+\vspace{5pt}
+
+This is the sort of environment users now \emph{expect} to have - it is no longer novel. We are finally
+  {\color{red} Bringing code to the data} - almost did with GAVIP \cite{2016SPIE.9913E..1VV}
+
+\bf{ Bruno will have more to say on this topic. }
+}
