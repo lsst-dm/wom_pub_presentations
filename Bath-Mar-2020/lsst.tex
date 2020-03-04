@@ -45,11 +45,31 @@ An optical/near-IR survey of half the sky in ugrizy bands to r~27.5 (36 nJy) bas
 \end{column}
 \begin{column}{0.5\textwidth}
 \\
-	\includegraphics[width=0.95\textwidth,trim=0cm 0cm 5cm 0cm,clip]{images/cerroMar2019}
+	\includegraphics[width=0.95\textwidth,trim=0cm 0cm 0cm 0cm,clip]{images/cerroSep2019}
 \end{column}
 \end{columns}
 
 }
+
+\frame {\frametitle{Data Management Mission Statement}
+\begin{columns}
+	\column{0.65\textwidth}
+	      \includegraphics[width=1.0\textwidth]{images/DmMap}\\
+	      \column{0.35\textwidth}
+	       \\
+
+	       DM's mission:\\
+	           \textit{Stand up operable, maintainable, quality services to deliver high-quality LSST data products for science, all on time and within reasonable cost.}\\
+		       \vspace{10pt}
+		       Development is distributed across the Americas.\\
+
+		       { Plus we have partners like IN2P3 (France).}\\
+		       \vspace{5pt}
+		       About 100 individuals $\approx$80 FTE
+
+\end{columns}
+}
+\input{communication}
 
 \frame {\frametitle{  DM build and deploy - already challenging }
 	\vspace{-1cm}
@@ -77,36 +97,16 @@ An optical/near-IR survey of half the sky in ugrizy bands to r~27.5 (36 nJy) bas
 
 
 
-\frame {\frametitle{  Data Backbone}
-\begin{columns}
-\column{0.45\textwidth}
-      \includegraphics[width=1.0\textwidth]{images/DataBackbone}\\
-\column{0.55\textwidth}
- \\
- One small box on the previous slide was Data Backbone.\\ That hides several things \\
- \begin{itemize}
-	 \item Qserv - the LSST end user database
- \begin{itemize}
-	 \item{\color{red} Custom Massive Parallel Processing (MPP) }
-	 \item allow queries on $\approx 20$ Petabytes of tabular data
-	\item $4 \times 10^{10}$ objects, $4 \times 10^{13}$ sources (observations)
- \end{itemize}
-\item All the networks : we now have fiber to the mountain and from La Serena to NCSA (two routes)
- \end{itemize}
-\vspace{15pt}
-{\tiny \bf diagram K.T. Lim}
-\end{columns}
-}
-
 \input{qserv}
 
-\input{wod}
 
 \frame{\frametitle{Guidelines,  tools,  conventions }
 \begin{itemize}
     \item {\color{green} Its great having extensive guidelines - it was also something super on Gaia}
-   \item \url{developer.lsst.io} is a full developer guide - everything from git commit messages to style guides for Python and C+.
-   \item \url{pipelines.lsst.io} documents the main software release(s)
+   \item DPAC had full engineering Guide from early on \citellp{LL:WOM-011} - how to Mantis, SVN, Java guide \ldots
+   \item \url{http://developer.lsst.io} is a full developer guide - everything from git commit messages to style guides for Python and C+.
+
+   \item \url{http://pipelines.lsst.io} documents the main software release(s)
 	\begin{itemize}
 	\item worst of both worlds - it is a monolithic release  - but made up of > 120 git repos
 	\item Still using \emph{in house} tools like EUPS \url{https://github.com/RobertLuptonTheGood/eups}
@@ -116,12 +116,13 @@ An optical/near-IR survey of half the sky in ugrizy bands to r~27.5 (36 nJy) bas
 \item  Language (spoken/written) and conventions are also super important
     \begin{itemize}
 	    \item Single language projects  (like US or UK) fall more easily in the trap of \emph{believing} they speak  about the same topics because they speak language X.
-	    \item {\color{blue} - on RubinObs we lack something foundational like \citeds{LL:BAS-003}}
+	    \item {\color{blue} RubinObs lacks something like \citeds{LL:BAS-003}}
     \end{itemize}
 
 \end{itemize}
 }
 
+\input{lic}
 
 \frame {\frametitle{SDSS image }
 	\begin{columns}
@@ -139,7 +140,7 @@ An optical/near-IR survey of half the sky in ugrizy bands to r~27.5 (36 nJy) bas
 \frame {\frametitle{Hyper Suprime Cam (HSC) on Subaru }
 \begin{columns}
       \column{0.45\textwidth}
-		       \vspace{-20pt}
+%\vspace{-20pt}
 	      \includegraphics[width=1.0\textwidth]{images/HSCcosmos}\\
       \column{0.55\textwidth}
 		       \\
@@ -150,9 +151,6 @@ An optical/near-IR survey of half the sky in ugrizy bands to r~27.5 (36 nJy) bas
 \item Unknown statistical distributions,   Truncated, censored and missing data, Unreliable quantities (e.g. unknown systematics and random errors)
 \item PSF - short exposure - atmosphere dominated ?
 
-\begin{itemize}
-\item cosmic shear signal from weak lensing
-\end{itemize}
 \item Photometry  challenging - will Gaia help ..
 \item Everything is blended!!
 \end{itemize}
@@ -180,6 +178,7 @@ An optical/near-IR survey of half the sky in ugrizy bands to r~27.5 (36 nJy) bas
 \item  source extraction
 \item  overlay extracted information on cleaned image
 \end{itemize}
+\item This helps users understand how catalogs are produced.
 \end{itemize}
 \end{columns}
 }

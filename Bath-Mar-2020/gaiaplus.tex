@@ -33,20 +33,20 @@
       \includegraphics[width=1.0\textwidth]{DocTree}\\
     %\end{center}
 	  {\tiny Rubin Obs DM  Doctree (\citeds{LDM-294})}\hfill
+	  Rubin less rigorous than DPAC - but then its on the ground
 %}}
   \end{column}
   \begin{column}{0.5\textwidth}
-    \vskip-0.3cm
-    \textbf{European Cooperation for Space Standardization}
+    \textbf{\tiny European Cooperation for Space Standardization}
     \begin{itemize}
-      \item ECSS tailored as in figure
+      \item Standards need to be tailored
         \begin{itemize}
-          \item LaTeX Templates/examples provided (by SOC)
+          \item LaTeX Templates/examples provided
           \item Documents are iterated ---  All of this is done for all  products.
-          \item {\color{green} It is very good to have a standard set of documents augmented by technical notes and streamlined ECSS}
+          \item {\color{green} It is very good to have a standard set of documents augmented by technical notes and streamlined }
           \item Some still found it too heavy --- other reports requested beyond the standard ones.
         \end{itemize}
-      \item DPAC had sufficient QA people ($\sim1/$CU) from the start to help with this% and create examples and templates.
+\item DPAC had sufficient QA people ($\sim1/$CU) from the start (Rubin NONE)
     \end{itemize}
   \end{column}
 \end{columns}
@@ -57,19 +57,17 @@
 \frame{\frametitle{Development tools}
 \vspace{-8pt}
 \begin{itemize}
-  \item All DPAC code and docs in Subversion, hosted at ESAC
+  \item All DPAC code and docs in Subversion, Rubin in GitHub.
     \begin{itemize}
       \item Access control according to Group membership in the LDAP
     \end{itemize}
-  \item Mantis for centralised issue tracking (includes risks and actions)
+  \item Centralized issue tracking (includes risks and actions)
     \begin{itemize}
-      \item ALL DPAC issues in one system hosted at ESTEC
-      \item {\color{red} Jira would probably be better }
+      \item DPAC - Mantis eventually Jira.  Rubin  Jira
   \end{itemize}
 \pause
-  \item{\color{green} Having one language is good \citep{2011arXiv1108.0355O}} agreed 2006
+  \item{\color{green} Having one language is good \citep{2011arXiv1108.0355O}} Gaia agreed on Java 2006, Rubin Python/C++ (2009  perhaps earlier)
 
-    \citeds{LL:JH-001} --- only one verification part is NOT in Java.
     \begin{itemize}
       \item Can have a library of standard  routines  GaiaTools (Relativity, Field Angle Calculator,
         Ephemeris handling\ldots)
@@ -77,12 +75,11 @@
           \item {\color{red} The set of routines were not defined hence GaiaTools is a bit of
           hodgepodge mess\ldots}
           \item {\color{blue} Counter argument for common tools is (unnecessary)
-          interdependence\ldots}
+          interdependence\ldots} we have that on Rubin
         \end{itemize}
-      \item all libs in Nexus  - builds against these {\color{green}no full builds}
-      \item builds with Ant; {\color{red} Maven might be the thing to use now}
-      \item automated builds with Hudson/Jenkins (previously cruisecontrol)
-      \item {\color{blue} virtual machines make some reasons for Java invalid} - LSST not ?
+      \item {\color{blue} virtual machines make some reasons for Java invalid}
+      \item Rubin builds take a long time ..
+
     \end{itemize}
 \end{itemize}
 }
