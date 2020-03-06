@@ -96,3 +96,4 @@ VCD:Verification Control Document
 VO:Virtual Observatory
 WAN:Wide Area Network
 bps:bit(s) per second
+APL:Apachhe Public Licence
